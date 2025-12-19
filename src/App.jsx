@@ -39,7 +39,42 @@ const TRANSLATIONS = {
     storeLocator: "Store Locator",
     visitUs: "Visit Our Store",
     directions: "Get Directions",
-    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100",
+
+    // Product Translations (English Keys)
+    'herbal-teas_title': 'Herbal Teas',
+    'herbal-teas_desc': 'Revitalizing blends for mind and body.',
+    'ginger-tea_name': 'Ginger & Honey Blend',
+    'ginger-tea_desc': 'A warming natural blend of ginger, lemon, and honey crafted to energize your body and boost immunity.',
+    'strawberry-tea_name': 'Strawberry Essence Tea',
+    'strawberry-tea_desc': 'Delightful pure Ceylon tea fused with ripe strawberry essence.',
+    'slim-herb_name': 'Slim Herb Tea',
+    'slim-herb_desc': 'Formulated for weight management and metabolic support.',
+    'lemon-tea_name': 'Zesty Lemon Tea',
+    'lemon-tea_desc': 'Refreshing citrus notes blended with premium tea leaves.',
+    
+    'organic-snacks_title': 'Dried Fruits & Snacks',
+    'organic-snacks_desc': 'Nature’s candy, dehydrated to perfection.',
+    'dehydrated-mango_name': 'Dehydrated Mango Slices',
+    'dehydrated-mango_desc': '100% natural mango slices with no added sugar.',
+    'banana-chips_name': 'Organic Banana Chips',
+    'banana-chips_desc': 'Crispy, organic banana chips fried in virgin coconut oil.',
+    'mixed-fruit_name': 'Tropical Mixed Fruit',
+    'mixed-fruit_desc': 'A vibrant mix of dehydrated pineapple, papaya, and mango.',
+
+    'coconut-products_title': 'Coconut Range',
+    'coconut-products_desc': 'Pure goodness from the Sri Lankan coconut triangle.',
+    'virgin-oil_name': 'Virgin Coconut Oil',
+    'virgin-oil_desc': 'Cold-pressed, unrefined organic coconut oil.',
+    'coconut-milk_name': 'Organic Coconut Milk',
+    'coconut-milk_desc': 'Rich and creamy milk extracted from fresh organic coconuts.',
+
+    'spices_title': 'Spices & Herbs',
+    'spices_desc': 'Aromatic spices to elevate your culinary creations.',
+    'cinnamon_name': 'Ceylon Cinnamon Sticks',
+    'cinnamon_desc': 'True Ceylon Cinnamon (Alba grade). Sweet, aromatic, and packed with antioxidants.',
+    'black-pepper_name': 'Organic Black Pepper',
+    'black-pepper_desc': 'Whole black peppercorns sun-dried to retain their bold, spicy heat.'
   },
   si: {
     label: "සිංහල",
@@ -60,7 +95,42 @@ const TRANSLATIONS = {
     storeLocator: "වෙළඳසැල් සොයන්නා",
     visitUs: "අපගේ වෙළඳසැලට පැමිණෙන්න",
     directions: "මාර්ගෝපදේශ ලබා ගන්න",
-    storeAddress: "නො.548/B නාවල පාර, ශ්‍රී ජයවර්ධනපුර කෝට්ටේ 10100"
+    storeAddress: "නො.548/B නාවල පාර, ශ්‍රී ජයවර්ධනපුර කෝට්ටේ 10100",
+
+    // Product Translations (Sinhala)
+    'herbal-teas_title': 'ඖෂධීය තේ',
+    'herbal-teas_desc': 'කය සහ මනස පුබුදුවාලන මිශ්‍රණ.',
+    'ginger-tea_name': 'ඉඟුරු සහ පැණි මිශ්‍රණය',
+    'ginger-tea_desc': 'ශරීරය ප්‍රාණවත් කිරීමට සහ ප්‍රතිශක්තිය වැඩි කිරීමට සකස් කරන ලද ඉඟුරු, ලෙමන් සහ පැණි වල ස්වාභාවික මිශ්‍රණයකි.',
+    'strawberry-tea_name': 'ස්ට්‍රෝබෙරි තේ',
+    'strawberry-tea_desc': 'ඉදුණු ස්ට්‍රෝබෙරි සාරය සමඟ මුසු වූ පිරිසිදු ලංකා තේ.',
+    'slim-herb_name': 'සිහින් හැඩය සඳහා තේ',
+    'slim-herb_desc': 'බර පාලනය සහ පරිවෘත්තීය ක්‍රියාවලිය සඳහා සකස් කර ඇත.',
+    'lemon-tea_name': 'දෙහි මිශ්‍ර තේ',
+    'lemon-tea_desc': 'වාරික තේ දළු සමඟ මුසු වූ ප්‍රබෝධමත් දෙහි රසය.',
+    
+    'organic-snacks_title': 'වියළි පලතුරු සහ කෙටි කෑම',
+    'organic-snacks_desc': 'ස්වාභාවික රසයෙන් පිරිපුන්, මනාව වියලන ලද පලතුරු.',
+    'dehydrated-mango_name': 'වියලන ලද අඹ',
+    'dehydrated-mango_desc': 'සීනි එකතු නොකළ 100% ස්වාභාවික අඹ පෙති.',
+    'banana-chips_name': 'කාබනික කෙසෙල් චිප්ස්',
+    'banana-chips_desc': 'පිරිසිදු පොල්තෙලෙන් බදින ලද, රසවත් කෙසෙල් පෙති.',
+    'mixed-fruit_name': 'පලතුරු මිශ්‍රණය',
+    'mixed-fruit_desc': 'වියලන ලද අන්නාසි, පැපොල් සහ අඹ වල රසවත් මිශ්‍රණයක්.',
+
+    'coconut-products_title': 'පොල් ආශ්‍රිත නිෂ්පාදන',
+    'coconut-products_desc': 'ලංකා පොල් ත්‍රිකෝණයෙන් එන පිරිසිදු ගුණ.',
+    'virgin-oil_name': 'වර්ජින් පොල්තෙල්',
+    'virgin-oil_desc': 'තාපය භාවිතා නොකර සිසිල්ව පෙරාගත් පිරිසිදු පොල්තෙල්.',
+    'coconut-milk_name': 'කාබනික පොල් කිරි',
+    'coconut-milk_desc': 'නැවුම් කාබනික පොල් වලින් ලබාගත් උකු පොල් කිරි.',
+
+    'spices_title': 'කුළුබඩු වර්ග',
+    'spices_desc': 'ඔබේ ආහාර රසවත් කිරීමට සුවඳැති කුළුබඩු.',
+    'cinnamon_name': 'කුරුඳු පොලු',
+    'cinnamon_desc': 'නියම ලංකා කුරුඳු. ප්‍රතිඔක්සිකාරක වලින් පොහොසත්.',
+    'black-pepper_name': 'කාබනික ගම්මිරිස්',
+    'black-pepper_desc': 'හිරු එළියෙන් වියලන ලද සම්පූර්ණ ගම්මිරිස් ඇට.'
   },
   ta: {
     label: "தமிழ்",
@@ -81,7 +151,14 @@ const TRANSLATIONS = {
     storeLocator: "கடை இருப்பிடம்",
     visitUs: "எங்கள் கடைக்குச் செல்லுங்கள்",
     directions: "திசைகளைப் பெறுங்கள்",
-    storeAddress: "எண்.548/B நாவல வீதி, ஸ்ரீ ஜயவர்தனபுர கோட்டை 10100"
+    storeAddress: "எண்.548/B நாவல வீதி, ஸ்ரீ ஜயவர்தனபுர கோட்டை 10100",
+
+     // Product Translations (Tamil - Falling back to English structure for demo, update with real Tamil text as needed)
+    'herbal-teas_title': 'மூலிகை தேநீர்',
+    'herbal-teas_desc': 'மனதிற்கும் உடலுக்கும் புத்துணர்ச்சி அளிக்கும் கலவைகள்.',
+    'ginger-tea_name': 'இஞ்சி & தேன் கலவை',
+    'ginger-tea_desc': 'உங்கள் உடலை உற்சாகப்படுத்தவும் நோய் எதிர்ப்பு சக்தியை அதிகரிக்கவும் உருவாக்கப்பட்ட இஞ்சி, எலுமிச்சை மற்றும் தேன் ஆகியவற்றின் இயற்கையான கலவை.',
+    // ... add more tamil translations here ...
   },
   es: {
     label: "Español",
@@ -212,6 +289,18 @@ const TRANSLATIONS = {
 };
 
 const getLanguageName = (code) => TRANSLATIONS[code]?.label || "English";
+
+// HELPER: Auto-translate product content
+const getLocalizedContent = (item, lang) => {
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  return {
+    ...item,
+    // Try to find a translation key like 'ginger-tea_name', otherwise fallback to original item.name
+    title: t[`${item.id}_title`] || item.title,
+    description: t[`${item.id}_desc`] || item.description,
+    name: t[`${item.id}_name`] || item.name,
+  };
+};
 
 // --- MOCK DATA ---
 const CATALOG_DATA = [
@@ -555,6 +644,8 @@ const Branding = ({ lang, setLang, onViewChange }) => {
 
 const CategoryCard = ({ category, onClick, lang }) => {
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  const localCat = getLocalizedContent(category, lang);
+
   return (
     <TiltCard 
       onClick={() => onClick(category)}
@@ -566,8 +657,8 @@ const CategoryCard = ({ category, onClick, lang }) => {
           <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-900/50 to-emerald-800/50 border border-white/5 flex items-center justify-center mb-4 text-emerald-400 group-hover:text-amber-400 group-hover:scale-110 transition-all duration-500">
             {category.icon}
           </div>
-          <h3 className="text-2xl font-bold text-white mb-2 translate-z-10 group-hover:translate-x-1 transition-transform">{category.title}</h3>
-          <p className="text-emerald-200/60 text-sm leading-relaxed">{category.description}</p>
+          <h3 className="text-2xl font-bold text-white mb-2 translate-z-10 group-hover:translate-x-1 transition-transform">{localCat.title}</h3>
+          <p className="text-emerald-200/60 text-sm leading-relaxed">{localCat.description}</p>
           
           <div className="mt-6 flex items-center text-amber-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
             <span>{t.explore}</span>
@@ -579,33 +670,37 @@ const CategoryCard = ({ category, onClick, lang }) => {
   );
 };
 
-const ProductCard = ({ product, onClick }) => (
-  <TiltCard 
-    onClick={() => onClick(product)}
-    className="group w-full cursor-pointer"
-  >
-    <div className="w-full text-left bg-white/5 rounded-2xl border border-white/10 overflow-hidden hover:border-amber-500/30 transition-colors duration-300">
-      <div className="aspect-[4/3] overflow-hidden relative">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-        />
-        <div className="absolute top-3 left-3 flex gap-2">
-          {product.tags.map(tag => (
-            <span key={tag} className="px-2 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] uppercase tracking-wider text-amber-400 font-bold border border-white/10">
-              {tag}
-            </span>
-          ))}
+const ProductCard = ({ product, onClick, lang }) => {
+  const localProd = getLocalizedContent(product, lang);
+  
+  return (
+    <TiltCard 
+      onClick={() => onClick(product)}
+      className="group w-full cursor-pointer"
+    >
+      <div className="w-full text-left bg-white/5 rounded-2xl border border-white/10 overflow-hidden hover:border-amber-500/30 transition-colors duration-300">
+        <div className="aspect-[4/3] overflow-hidden relative">
+          <img 
+            src={product.image} 
+            alt={localProd.name} 
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+          />
+          <div className="absolute top-3 left-3 flex gap-2">
+            {product.tags.map(tag => (
+              <span key={tag} className="px-2 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] uppercase tracking-wider text-amber-400 font-bold border border-white/10">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="p-4">
+          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">{localProd.name}</h3>
+          <p className="text-xs text-white/50 line-clamp-2">{localProd.description}</p>
         </div>
       </div>
-      <div className="p-4">
-        <h3 className="text-lg font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">{product.name}</h3>
-        <p className="text-xs text-white/50 line-clamp-2">{product.description}</p>
-      </div>
-    </div>
-  </TiltCard>
-);
+    </TiltCard>
+  );
+};
 
 const AIOutput = ({ type, content, loading, onClose, lang }) => {
   if (!type) return null;
@@ -862,31 +957,36 @@ const App = () => {
     );
   };
 
-  const renderCategory = () => (
-    <div className="animate-slideUp">
-      <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#0f1710]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
-        <button onClick={goBack} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <h2 className="text-xl font-bold text-white">{activeCategory.title}</h2>
-        <div className="w-10" /> 
-      </div>
+  const renderCategory = () => {
+    const localCat = getLocalizedContent(activeCategory, lang);
+    return (
+      <div className="animate-slideUp">
+        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#0f1710]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
+          <button onClick={goBack} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <h2 className="text-xl font-bold text-white">{localCat.title}</h2>
+          <div className="w-10" /> 
+        </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {activeCategory.products.map((product) => (
-          <ProductCard key={product.id} product={product} onClick={handleProductClick} />
-        ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {activeCategory.products.map((product) => (
+            <ProductCard key={product.id} product={product} onClick={handleProductClick} lang={lang} />
+          ))}
+        </div>
+        
+        <div className="mt-12 p-8 rounded-3xl bg-emerald-900/10 border border-emerald-500/10 text-center">
+          <Leaf className="w-8 h-8 text-emerald-500 mx-auto mb-3 opacity-50" />
+          <p className="text-emerald-200/40 text-sm">100% Organic Certified • Sustainably Sourced</p>
+        </div>
       </div>
-      
-      <div className="mt-12 p-8 rounded-3xl bg-emerald-900/10 border border-emerald-500/10 text-center">
-        <Leaf className="w-8 h-8 text-emerald-500 mx-auto mb-3 opacity-50" />
-        <p className="text-emerald-200/40 text-sm">100% Organic Certified • Sustainably Sourced</p>
-      </div>
-    </div>
-  );
+    );
+  };
 
   const renderProduct = () => {
     const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+    const localProduct = getLocalizedContent(activeProduct, lang);
+
     return (
       <div className="animate-fadeIn relative min-h-screen pb-32">
         {/* Floating Back Button */}
@@ -901,7 +1001,7 @@ const App = () => {
         <div className="relative w-full aspect-[4/5] md:aspect-video rounded-b-[3rem] overflow-hidden shadow-2xl">
           <img 
             src={activeProduct.image} 
-            alt={activeProduct.name} 
+            alt={localProduct.name} 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f1710] via-transparent to-transparent opacity-90" />
@@ -914,7 +1014,7 @@ const App = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">{activeProduct.name}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">{localProduct.name}</h1>
           </div>
         </div>
 
@@ -924,7 +1024,7 @@ const App = () => {
             <div className="prose prose-invert flex-1">
               <h3 className="text-amber-400 text-sm font-bold uppercase tracking-widest mb-4">{t.description}</h3>
               <p className="text-xl text-emerald-100/80 leading-relaxed font-light">
-                {activeProduct.description}
+                {localProduct.description}
               </p>
             </div>
             <button 
