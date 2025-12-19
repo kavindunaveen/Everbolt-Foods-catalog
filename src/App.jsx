@@ -13,7 +13,9 @@ import {
   Loader2,
   StopCircle,
   Globe,
-  Check
+  MapPin,
+  Clock,
+  Phone
 } from 'lucide-react';
 
 // --- TRANSLATIONS ---
@@ -33,7 +35,11 @@ const TRANSLATIONS = {
     aiLoading: "Consulting the organic database...",
     wellness: "Wellness Insights",
     close: "Close",
-    selectLang: "Select Language"
+    selectLang: "Select Language",
+    storeLocator: "Store Locator",
+    visitUs: "Visit Our Store",
+    directions: "Get Directions",
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
   },
   si: {
     label: "සිංහල",
@@ -50,7 +56,11 @@ const TRANSLATIONS = {
     aiLoading: "කාබනික දත්ත පද්ධතිය පරීක්ෂා කරමින්...",
     wellness: "සුවතා තොරතුරු",
     close: "වසන්න",
-    selectLang: "භාෂාව තෝරන්න"
+    selectLang: "භාෂාව තෝරන්න",
+    storeLocator: "වෙළඳසැල් සොයන්නා",
+    visitUs: "අපගේ වෙළඳසැලට පැමිණෙන්න",
+    directions: "මාර්ගෝපදේශ ලබා ගන්න",
+    storeAddress: "නො.548/B නාවල පාර, ශ්‍රී ජයවර්ධනපුර කෝට්ටේ 10100"
   },
   ta: {
     label: "தமிழ்",
@@ -67,7 +77,11 @@ const TRANSLATIONS = {
     aiLoading: "தரவுத்தளத்தை ஆய்வு செய்கிறது...",
     wellness: "ஆரோக்கிய குறிப்புகள்",
     close: "மூடு",
-    selectLang: "மொழியைத் தேர்ந்தெடுக்கவும்"
+    selectLang: "மொழியைத் தேர்ந்தெடுக்கவும்",
+    storeLocator: "கடை இருப்பிடம்",
+    visitUs: "எங்கள் கடைக்குச் செல்லுங்கள்",
+    directions: "திசைகளைப் பெறுங்கள்",
+    storeAddress: "எண்.548/B நாவல வீதி, ஸ்ரீ ஜயவர்தனபுர கோட்டை 10100"
   },
   es: {
     label: "Español",
@@ -84,7 +98,11 @@ const TRANSLATIONS = {
     aiLoading: "Consultando la base de datos orgánica...",
     wellness: "Perspectivas de Bienestar",
     close: "Cerrar",
-    selectLang: "Seleccionar Idioma"
+    selectLang: "Seleccionar Idioma",
+    storeLocator: "Localizador de Tiendas",
+    visitUs: "Visita Nuestra Tienda",
+    directions: "Obtener Direcciones",
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
   },
   fr: {
     label: "Français",
@@ -101,7 +119,11 @@ const TRANSLATIONS = {
     aiLoading: "Consultation de la base de données biologique...",
     wellness: "Bien-être et Santé",
     close: "Fermer",
-    selectLang: "Choisir la Langue"
+    selectLang: "Choisir la Langue",
+    storeLocator: "Localisateur de Magasin",
+    visitUs: "Visitez Notre Magasin",
+    directions: "Obtenir l'Itinéraire",
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
   },
   de: {
     label: "Deutsch",
@@ -118,7 +140,11 @@ const TRANSLATIONS = {
     aiLoading: "Durchsuche die Bio-Datenbank...",
     wellness: "Wellness-Einblicke",
     close: "Schließen",
-    selectLang: "Sprache Wählen"
+    selectLang: "Sprache Wählen",
+    storeLocator: "Filialfinder",
+    visitUs: "Besuchen Sie uns",
+    directions: "Wegbeschreibung",
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
   },
   zh: {
     label: "中文",
@@ -135,7 +161,11 @@ const TRANSLATIONS = {
     aiLoading: "正在查询有机数据库...",
     wellness: "健康见解",
     close: "关闭",
-    selectLang: "选择语言"
+    selectLang: "选择语言",
+    storeLocator: "商店定位器",
+    visitUs: "访问我们的商店",
+    directions: "获取路线",
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
   },
   ar: {
     label: "العربية",
@@ -152,7 +182,11 @@ const TRANSLATIONS = {
     aiLoading: "جاري استشارة قاعدة البيانات العضوية...",
     wellness: "رؤى صحية",
     close: "إغلاق",
-    selectLang: "اختر اللغة"
+    selectLang: "اختر اللغة",
+    storeLocator: "محدد موقع المتجر",
+    visitUs: "قم بزيارة متجرنا",
+    directions: "الحصول على الاتجاهات",
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
   },
   ja: {
     label: "日本語",
@@ -169,7 +203,11 @@ const TRANSLATIONS = {
     aiLoading: "オーガニックデータベースを検索中...",
     wellness: "ウェルネス情報",
     close: "閉じる",
-    selectLang: "言語を選択"
+    selectLang: "言語を選択",
+    storeLocator: "店舗検索",
+    visitUs: "店舗へ行く",
+    directions: "道順を表示",
+    storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100"
   }
 };
 
@@ -182,6 +220,7 @@ const CATALOG_DATA = [
     title: 'Herbal Teas',
     icon: <Coffee className="w-6 h-6" />,
     description: 'Revitalizing blends for mind and body.',
+    theme: { blob1: 'bg-lime-500/20', blob2: 'bg-emerald-500/20' },
     products: [
       {
         id: 'ginger-tea',
@@ -218,6 +257,7 @@ const CATALOG_DATA = [
     title: 'Dried Fruits & Snacks',
     icon: <Leaf className="w-6 h-6" />,
     description: 'Nature’s candy, dehydrated to perfection.',
+    theme: { blob1: 'bg-orange-500/20', blob2: 'bg-yellow-500/20' },
     products: [
       {
         id: 'dehydrated-mango',
@@ -247,6 +287,7 @@ const CATALOG_DATA = [
     title: 'Coconut Range',
     icon: <Leaf className="w-6 h-6" />,
     description: 'Pure goodness from the Sri Lankan coconut triangle.',
+    theme: { blob1: 'bg-cyan-500/20', blob2: 'bg-slate-200/10' },
     products: [
       {
         id: 'virgin-oil',
@@ -269,6 +310,7 @@ const CATALOG_DATA = [
     title: 'Spices & Herbs',
     icon: <Utensils className="w-6 h-6" />,
     description: 'Aromatic spices to elevate your culinary creations.',
+    theme: { blob1: 'bg-red-600/20', blob2: 'bg-amber-600/20' },
     products: [
       {
         id: 'cinnamon',
@@ -456,13 +498,13 @@ const TiltCard = ({ children, onClick, className = "" }) => {
 
 // --- COMPONENTS ---
 
-const Branding = ({ lang, setLang }) => {
+const Branding = ({ lang, setLang, onViewChange }) => {
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   const [showLangMenu, setShowLangMenu] = useState(false);
 
   return (
     <div className="flex items-center justify-between mb-8 relative z-50">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 cursor-pointer" onClick={() => onViewChange('home')}>
         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20">
           <Leaf className="text-white w-6 h-6" />
         </div>
@@ -472,29 +514,40 @@ const Branding = ({ lang, setLang }) => {
         </div>
       </div>
 
-      {/* Language Toggle */}
-      <div className="relative">
+      <div className="flex items-center gap-3">
+        {/* Store Locator Button */}
         <button 
-          onClick={() => setShowLangMenu(!showLangMenu)}
-          className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-3 py-2 rounded-full text-xs font-bold text-emerald-100 transition-all border border-white/5"
+          onClick={() => onViewChange('store-locator')}
+          className="bg-white/10 hover:bg-white/20 backdrop-blur-md p-2 rounded-full text-emerald-100 transition-all border border-white/5"
+          title={t.storeLocator}
         >
-          <Globe className="w-4 h-4" />
-          <span className="uppercase">{lang}</span>
+          <MapPin className="w-4 h-4" />
         </button>
 
-        {showLangMenu && (
-          <div className="absolute right-0 top-full mt-2 w-48 bg-[#0f1710] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fadeIn h-64 overflow-y-auto custom-scrollbar">
-            {Object.keys(TRANSLATIONS).map((code) => (
-              <button
-                key={code}
-                onClick={() => { setLang(code); setShowLangMenu(false); }}
-                className={`w-full text-left px-4 py-3 text-sm hover:bg-white/10 transition-colors border-b border-white/5 last:border-0 ${lang === code ? 'text-amber-400 font-bold' : 'text-white/60'}`}
-              >
-                {TRANSLATIONS[code].label}
-              </button>
-            ))}
-          </div>
-        )}
+        {/* Language Toggle */}
+        <div className="relative">
+          <button 
+            onClick={() => setShowLangMenu(!showLangMenu)}
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-3 py-2 rounded-full text-xs font-bold text-emerald-100 transition-all border border-white/5"
+          >
+            <Globe className="w-4 h-4" />
+            <span className="uppercase">{lang}</span>
+          </button>
+
+          {showLangMenu && (
+            <div className="absolute right-0 top-full mt-2 w-48 bg-[#0f1710] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fadeIn h-64 overflow-y-auto custom-scrollbar">
+              {Object.keys(TRANSLATIONS).map((code) => (
+                <button
+                  key={code}
+                  onClick={() => { setLang(code); setShowLangMenu(false); }}
+                  className={`w-full text-left px-4 py-3 text-sm hover:bg-white/10 transition-colors border-b border-white/5 last:border-0 ${lang === code ? 'text-amber-400 font-bold' : 'text-white/60'}`}
+                >
+                  {TRANSLATIONS[code].label}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -609,6 +662,9 @@ const App = () => {
   const [showToast, setShowToast] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [lang, setLang] = useState('en');
+  
+  // Theme State
+  const [theme, setTheme] = useState({ blob1: 'bg-emerald-500/10', blob2: 'bg-amber-500/5' });
 
   // AI State
   const [aiMode, setAiMode] = useState(null); 
@@ -647,6 +703,10 @@ const App = () => {
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
+    // Apply dynamic theme if it exists in data
+    if (category.theme) {
+      setTheme(category.theme);
+    }
     setView('category');
     window.scrollTo(0, 0);
   };
@@ -661,9 +721,20 @@ const App = () => {
     if (view === 'product') {
       setView('category');
     } else {
+      // Revert to default theme when going home
+      setTheme({ blob1: 'bg-emerald-500/10', blob2: 'bg-amber-500/5' });
       setView('home');
       setActiveCategory(null);
     }
+  };
+
+  // Explicit handler for view changes (for Store Locator nav)
+  const handleViewChange = (newView) => {
+    if (newView === 'home') {
+       setTheme({ blob1: 'bg-emerald-500/10', blob2: 'bg-amber-500/5' });
+       setActiveCategory(null);
+    }
+    setView(newView);
   };
 
   const handleShare = async () => {
@@ -907,10 +978,80 @@ const App = () => {
     );
   };
 
+  const renderStoreLocator = () => {
+    const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+    return (
+      <div className="animate-slideUp min-h-screen">
+        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#0f1710]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
+          <button onClick={() => handleViewChange('home')} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <h2 className="text-xl font-bold text-white">{t.storeLocator}</h2>
+          <div className="w-10" /> 
+        </div>
+
+        <div className="space-y-6">
+          {/* Map Card */}
+          <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/5">
+             <iframe 
+               width="100%" 
+               height="400" 
+               frameBorder="0" 
+               scrolling="no" 
+               marginHeight="0" 
+               marginWidth="0" 
+               src="https://maps.google.com/maps?q=No.548%2FB%20Nawala%20Rd%2C%20Sri%20Jayawardenepura%20Kotte%2010100&t=&z=15&ie=UTF8&iwloc=&output=embed"
+               className="w-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+             ></iframe>
+             <div className="p-6">
+               <div className="flex items-start gap-4 mb-4">
+                 <div className="p-3 rounded-full bg-emerald-500/20 text-emerald-400">
+                   <MapPin className="w-6 h-6" />
+                 </div>
+                 <div>
+                   <h3 className="text-lg font-bold text-white mb-1">{t.visitUs}</h3>
+                   <p className="text-white/60 text-sm leading-relaxed">{t.storeAddress}</p>
+                 </div>
+               </div>
+               
+               <a 
+                 href="https://www.google.com/maps/search/?api=1&query=No.548/B+Nawala+Rd,+Sri+Jayawardenepura+Kotte+10100" 
+                 target="_blank" 
+                 rel="noreferrer"
+                 className="w-full py-3 bg-amber-500 text-black font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-amber-400 transition-colors"
+               >
+                 <MapPin className="w-4 h-4" />
+                 {t.directions}
+               </a>
+             </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <Clock className="w-8 h-8 text-emerald-400" />
+              <div>
+                <h4 className="text-white font-bold">Opening Hours</h4>
+                <p className="text-white/40 text-sm">Daily: 8:00 AM - 8:00 PM</p>
+              </div>
+            </div>
+            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <Phone className="w-8 h-8 text-amber-400" />
+              <div>
+                <h4 className="text-white font-bold">Contact Us</h4>
+                <p className="text-white/40 text-sm">+94 11 234 5678</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   if (!isLoaded) return <div className="min-h-screen bg-[#0f1710]" />;
 
   return (
-    <div className="min-h-screen bg-[#0f1710] text-white font-sans selection:bg-amber-500/30">
+    <div className="min-h-screen bg-[#0f1710] text-white font-sans selection:bg-amber-500/30 transition-colors duration-1000">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
@@ -921,17 +1062,18 @@ const App = () => {
       `}</style>
 
       <div className="max-w-4xl mx-auto min-h-screen relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="fixed top-0 left-0 w-full h-[500px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/4" />
-        <div className="fixed bottom-0 right-0 w-full h-[500px] bg-amber-500/5 blur-[100px] rounded-full pointer-events-none translate-y-1/2" />
+        {/* Dynamic Background Elements */}
+        <div className={`fixed top-0 left-0 w-full h-[500px] blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/4 transition-all duration-1000 ${theme.blob1}`} />
+        <div className={`fixed bottom-0 right-0 w-full h-[500px] blur-[100px] rounded-full pointer-events-none translate-y-1/2 transition-all duration-1000 ${theme.blob2}`} />
 
         <div className="relative z-10 p-6 md:p-8">
           {/* Header only shows after language selection */}
-          {view !== 'language-select' && <Branding lang={lang} setLang={setLang} />}
+          {view !== 'language-select' && <Branding lang={lang} setLang={setLang} onViewChange={handleViewChange} />}
           
           <main>
             {view === 'language-select' && renderLanguageSelect()}
             {view === 'home' && renderHome()}
+            {view === 'store-locator' && renderStoreLocator()}
             {view === 'category' && renderCategory()}
             {view === 'product' && renderProduct()}
           </main>
