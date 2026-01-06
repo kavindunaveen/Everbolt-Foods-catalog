@@ -15,15 +15,18 @@ import {
   Globe,
   MapPin,
   Clock,
-  Phone
+  Phone,
+  Carrot,
+  Droplet,
+  Sun
 } from 'lucide-react';
 
 // --- TRANSLATIONS ---
 const TRANSLATIONS = {
   en: {
     label: "English",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "Nature's Best,\nDigitally Curated.",
     heroSubtitle: "Explore our premium range of organic teas, spices, and dried fruits from the heart of Sri Lanka.",
     explore: "Explore Collection",
@@ -41,9 +44,20 @@ const TRANSLATIONS = {
     directions: "Get Directions",
     storeAddress: "No.548/B Nawala Rd, Sri Jayawardenepura Kotte 10100",
 
-    // Product Translations (English Keys)
+    // --- CATEGORY TITLES (English) ---
     'herbal-teas_title': 'Herbal Teas',
     'herbal-teas_desc': 'Revitalizing blends for mind and body.',
+    'dried-fruits-snacks_title': 'Dried Fruits & Snacks',
+    'dried-fruits-snacks_desc': 'Nature’s candy, dehydrated to perfection.',
+    'dried-vegetables_title': 'Dried Vegetables',
+    'dried-vegetables_desc': 'Preserved nutrition for your daily meals.',
+    'dried-veg-powder_title': 'Dried Vegetable Powder',
+    'dried-veg-powder_desc': 'Nutrient-dense powders for smoothies and cooking.',
+    'spices_title': 'Spices & Herbs',
+    'spices_desc': 'Aromatic spices to elevate your culinary creations.',
+
+    // --- PRODUCT TRANSLATIONS (English) ---
+    // Herbal Teas
     'ginger-tea_name': 'Ginger & Honey Blend',
     'ginger-tea_desc': 'A warming natural blend of ginger, lemon, and honey crafted to energize your body and boost immunity.',
     'strawberry-tea_name': 'Strawberry Essence Tea',
@@ -53,8 +67,7 @@ const TRANSLATIONS = {
     'lemon-tea_name': 'Zesty Lemon Tea',
     'lemon-tea_desc': 'Refreshing citrus notes blended with premium tea leaves.',
     
-    'organic-snacks_title': 'Dried Fruits & Snacks',
-    'organic-snacks_desc': 'Nature’s candy, dehydrated to perfection.',
+    // Dried Fruits
     'dehydrated-mango_name': 'Dehydrated Mango Slices',
     'dehydrated-mango_desc': '100% natural mango slices with no added sugar.',
     'banana-chips_name': 'Organic Banana Chips',
@@ -62,15 +75,7 @@ const TRANSLATIONS = {
     'mixed-fruit_name': 'Tropical Mixed Fruit',
     'mixed-fruit_desc': 'A vibrant mix of dehydrated pineapple, papaya, and mango.',
 
-    'coconut-products_title': 'Coconut Range',
-    'coconut-products_desc': 'Pure goodness from the Sri Lankan coconut triangle.',
-    'virgin-oil_name': 'Virgin Coconut Oil',
-    'virgin-oil_desc': 'Cold-pressed, unrefined organic coconut oil.',
-    'coconut-milk_name': 'Organic Coconut Milk',
-    'coconut-milk_desc': 'Rich and creamy milk extracted from fresh organic coconuts.',
-
-    'spices_title': 'Spices & Herbs',
-    'spices_desc': 'Aromatic spices to elevate your culinary creations.',
+    // Spices
     'cinnamon_name': 'Ceylon Cinnamon Sticks',
     'cinnamon_desc': 'True Ceylon Cinnamon (Alba grade). Sweet, aromatic, and packed with antioxidants.',
     'black-pepper_name': 'Organic Black Pepper',
@@ -97,9 +102,19 @@ const TRANSLATIONS = {
     directions: "මාර්ගෝපදේශ ලබා ගන්න",
     storeAddress: "නො.548/B නාවල පාර, ශ්‍රී ජයවර්ධනපුර කෝට්ටේ 10100",
 
-    // Product Translations (Sinhala)
+    // --- CATEGORY TITLES (Sinhala) ---
     'herbal-teas_title': 'ඖෂධීය තේ',
     'herbal-teas_desc': 'කය සහ මනස පුබුදුවාලන මිශ්‍රණ.',
+    'dried-fruits-snacks_title': 'වියළි පලතුරු සහ කෙටි කෑම',
+    'dried-fruits-snacks_desc': 'ස්වාභාවික රසයෙන් පිරිපුන්, මනාව වියලන ලද පලතුරු.',
+    'dried-vegetables_title': 'වියළි එළවළු',
+    'dried-vegetables_desc': 'දෛනික ආහාර වේල් සඳහා කල් තබා ගත් පෝෂණය.',
+    'dried-veg-powder_title': 'වියළි එළවළු කුඩු',
+    'dried-veg-powder_desc': 'සුප් සහ ආහාර පිසීම සඳහා පෝෂ්‍යදායී කුඩු.',
+    'spices_title': 'කුළුබඩු වර්ග',
+    'spices_desc': 'ඔබේ ආහාර රසවත් කිරීමට සුවඳැති කුළුබඩු.',
+
+    // --- PRODUCT TRANSLATIONS (Sinhala) ---
     'ginger-tea_name': 'ඉඟුරු සහ පැණි මිශ්‍රණය',
     'ginger-tea_desc': 'ශරීරය ප්‍රාණවත් කිරීමට සහ ප්‍රතිශක්තිය වැඩි කිරීමට සකස් කරන ලද ඉඟුරු, ලෙමන් සහ පැණි වල ස්වාභාවික මිශ්‍රණයකි.',
     'strawberry-tea_name': 'ස්ට්‍රෝබෙරි තේ',
@@ -109,8 +124,6 @@ const TRANSLATIONS = {
     'lemon-tea_name': 'දෙහි මිශ්‍ර තේ',
     'lemon-tea_desc': 'වාරික තේ දළු සමඟ මුසු වූ ප්‍රබෝධමත් දෙහි රසය.',
     
-    'organic-snacks_title': 'වියළි පලතුරු සහ කෙටි කෑම',
-    'organic-snacks_desc': 'ස්වාභාවික රසයෙන් පිරිපුන්, මනාව වියලන ලද පලතුරු.',
     'dehydrated-mango_name': 'වියලන ලද අඹ',
     'dehydrated-mango_desc': 'සීනි එකතු නොකළ 100% ස්වාභාවික අඹ පෙති.',
     'banana-chips_name': 'කාබනික කෙසෙල් චිප්ස්',
@@ -118,15 +131,6 @@ const TRANSLATIONS = {
     'mixed-fruit_name': 'පලතුරු මිශ්‍රණය',
     'mixed-fruit_desc': 'වියලන ලද අන්නාසි, පැපොල් සහ අඹ වල රසවත් මිශ්‍රණයක්.',
 
-    'coconut-products_title': 'පොල් ආශ්‍රිත නිෂ්පාදන',
-    'coconut-products_desc': 'ලංකා පොල් ත්‍රිකෝණයෙන් එන පිරිසිදු ගුණ.',
-    'virgin-oil_name': 'වර්ජින් පොල්තෙල්',
-    'virgin-oil_desc': 'තාපය භාවිතා නොකර සිසිල්ව පෙරාගත් පිරිසිදු පොල්තෙල්.',
-    'coconut-milk_name': 'කාබනික පොල් කිරි',
-    'coconut-milk_desc': 'නැවුම් කාබනික පොල් වලින් ලබාගත් උකු පොල් කිරි.',
-
-    'spices_title': 'කුළුබඩු වර්ග',
-    'spices_desc': 'ඔබේ ආහාර රසවත් කිරීමට සුවඳැති කුළුබඩු.',
     'cinnamon_name': 'කුරුඳු පොලු',
     'cinnamon_desc': 'නියම ලංකා කුරුඳු. ප්‍රතිඔක්සිකාරක වලින් පොහොසත්.',
     'black-pepper_name': 'කාබනික ගම්මිරිස්',
@@ -153,12 +157,21 @@ const TRANSLATIONS = {
     directions: "திசைகளைப் பெறுங்கள்",
     storeAddress: "எண்.548/B நாவல வீதி, ஸ்ரீ ஜயவர்தனபுர கோட்டை 10100",
 
-     // Product Translations (Tamil - Falling back to English structure for demo, update with real Tamil text as needed)
+    // --- CATEGORY TITLES (Tamil) ---
     'herbal-teas_title': 'மூலிகை தேநீர்',
     'herbal-teas_desc': 'மனதிற்கும் உடலுக்கும் புத்துணர்ச்சி அளிக்கும் கலவைகள்.',
+    'dried-fruits-snacks_title': 'உலர்ந்த பழங்கள் & தின்பண்டங்கள்',
+    'dried-fruits-snacks_desc': 'இயற்கையின் இனிப்பு.',
+    'dried-vegetables_title': 'உலர்ந்த காய்கறிகள்',
+    'dried-vegetables_desc': 'உங்கள் அன்றாட உணவிற்கான ஊட்டச்சத்து.',
+    'dried-veg-powder_title': 'உலர்ந்த காய்கறி தூள்',
+    'dried-veg-powder_desc': 'சமையலுக்கான சத்தான பொடிகள்.',
+    'spices_title': 'மசாலா பொருட்கள்',
+    'spices_desc': 'உங்கள் சமையல் படைப்புகளை உயர்த்துவதற்கான நறுமண மசாலா.',
+
+     // Product Translations
     'ginger-tea_name': 'இஞ்சி & தேன் கலவை',
     'ginger-tea_desc': 'உங்கள் உடலை உற்சாகப்படுத்தவும் நோய் எதிர்ப்பு சக்தியை அதிகரிக்கவும் உருவாக்கப்பட்ட இஞ்சி, எலுமிச்சை மற்றும் தேன் ஆகியவற்றின் இயற்கையான கலவை.',
-    // ... add more tamil translations here ...
   },
   es: {
     label: "Español",
@@ -295,7 +308,6 @@ const getLocalizedContent = (item, lang) => {
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   return {
     ...item,
-    // Try to find a translation key like 'ginger-tea_name', otherwise fallback to original item.name
     title: t[`${item.id}_title`] || item.title,
     description: t[`${item.id}_desc`] || item.description,
     name: t[`${item.id}_name`] || item.name,
@@ -305,116 +317,141 @@ const getLocalizedContent = (item, lang) => {
 // --- MOCK DATA ---
 const CATALOG_DATA = [
   {
-    id: 'herbal-teas',
-    title: 'Herbal Teas',
-    icon: <Coffee className="w-6 h-6" />,
-    description: 'Revitalizing blends for mind and body.',
-    theme: { blob1: 'bg-lime-500/20', blob2: 'bg-emerald-500/20' },
+    id: 'dried-vegetables',
+    title: 'Dried Vegetables Range',
+    icon: <Carrot className="w-6 h-6" />,
+    description: 'Preserved nutrition for your daily meals.',
+    theme: { blob1: 'bg-green-600/20', blob2: 'bg-emerald-700/20' },
+    // Category Image Placeholder
+    catImage: '/categories/ca1.jpg',
     products: [
-      {
-        id: 'ginger-tea',
-        name: 'Ginger & Honey Blend',
-        description: 'A warming natural blend of ginger, lemon, and honey crafted to energize your body and boost immunity. Perfect for a morning kickstart.',
-        image: 'https://placehold.co/600x600/2a4c2a/fbbf24?text=Ginger+Tea',
-        tags: ['Immunity', 'Energy']
-      },
-      {
-        id: 'strawberry-tea',
-        name: 'Strawberry Essence Tea',
-        description: 'Delightful pure Ceylon tea fused with ripe strawberry essence. A sweet aroma that brightens your day naturally.',
-        image: 'https://placehold.co/600x600/4c2a2a/fbbf24?text=Strawberry+Tea',
-        tags: ['Fruity', 'Relaxing']
-      },
-      {
-        id: 'slim-herb',
-        name: 'Slim Herb Tea',
-        description: 'Formulated for weight management and metabolic support. Contains Garcinia and natural herbs to support a healthy lifestyle.',
-        image: 'https://placehold.co/600x600/2a4c2a/fbbf24?text=Slim+Herb+Tea',
-        tags: ['Wellness', 'Metabolism']
-      },
-      {
-        id: 'lemon-tea',
-        name: 'Zesty Lemon Tea',
-        description: 'Refreshing citrus notes blended with premium tea leaves. Excellent served hot or as a chilled iced tea.',
-        image: 'https://placehold.co/600x600/4c4c2a/fbbf24?text=Lemon+Tea',
-        tags: ['Citrus', 'Refresh']
-      }
+      { id: 'jackfruit', name: 'Dried Jackfruit', description: 'Available in 50g, 100g. Pure dehydrated jackfruit.', image: '/products/jackfruit.jpg', tags: ['50g', '100g'] },
+      { id: 'breadfruit', name: 'Dried Breadfruit', description: 'Available in 50g, 100g. Authentic dehydrated breadfruit.', image: '/products/breadfruit.jpg', tags: ['50g', '100g'] },
+      { id: 'bittergourd', name: 'Dried Bitter Gourd', description: 'Available in 50g, 100g. Sun-dried organic bitter gourd slices.', image: '/products/bittergourd.jpg', tags: ['50g', '100g'] },
+      { id: 'curry-leaves-dry', name: 'Dried Curry Leaves', description: 'Available in 50g, 100g. Aromatic dried leaves.', image: '/products/curry-leaves-dry.jpg', tags: ['50g', '100g'] },
+      { id: 'leeks', name: 'Dried Leeks', description: 'Available in 50g, 100g. Dehydrated leeks for soups and garnishing.', image: '/products/leeks.jpg', tags: ['50g', '100g'] }
     ]
   },
   {
-    id: 'organic-snacks',
-    title: 'Dried Fruits & Snacks',
-    icon: <Leaf className="w-6 h-6" />,
+    id: 'dried-fruits',
+    title: 'Dried Fruits Range',
+    icon: <Sun className="w-6 h-6" />,
     description: 'Nature’s candy, dehydrated to perfection.',
     theme: { blob1: 'bg-orange-500/20', blob2: 'bg-yellow-500/20' },
+    catImage: '/categories/dried-fruit.jpg',
     products: [
-      {
-        id: 'dehydrated-mango',
-        name: 'Dehydrated Mango Slices',
-        description: '100% natural mango slices with no added sugar. Chewy, sweet, and packed with tropical flavor.',
-        image: 'https://placehold.co/600x600/5c3a1a/fbbf24?text=Mango+Slices',
-        tags: ['No Sugar', 'Snack']
-      },
-      {
-        id: 'banana-chips',
-        name: 'Organic Banana Chips',
-        description: 'Crispy, organic banana chips fried in virgin coconut oil. A guilt-free crunchy snack for any time of day.',
-        image: 'https://placehold.co/600x600/5c3a1a/fbbf24?text=Banana+Chips',
-        tags: ['Crunchy', 'Organic']
-      },
-      {
-        id: 'mixed-fruit',
-        name: 'Tropical Mixed Fruit',
-        description: 'A vibrant mix of dehydrated pineapple, papaya, and mango. The perfect trail mix companion.',
-        image: 'https://placehold.co/600x600/5c3a1a/fbbf24?text=Mixed+Fruit',
-        tags: ['Mix', 'Tropical']
-      }
+      { id: 'pineapple', name: 'Dried Pineapple', description: 'Available in 50g, 100g. Tropical sweetness in every bite.', image: '/products/pineapple.jpg', tags: ['50g', '100g'] },
+      { id: 'papaya', name: 'Dried Papaya', description: 'Available in 50g, 100g. Naturally sweet dried papaya.', image: '/products/papaya.jpg', tags: ['50g', '100g'] },
+      { id: 'banana', name: 'Dried Banana', description: 'Available in 50g, 100g. Chewy and rich in energy.', image: '/products/banana.jpg', tags: ['50g', '100g'] },
+      { id: 'mango', name: 'Dried Mango', description: 'Available in 50g, 100g. The king of fruits, dehydrated.', image: '/products/mango.jpg', tags: ['50g', '100g'] }
     ]
   },
   {
-    id: 'coconut-products',
-    title: 'Coconut Range',
-    icon: <Leaf className="w-6 h-6" />,
-    description: 'Pure goodness from the Sri Lankan coconut triangle.',
-    theme: { blob1: 'bg-cyan-500/20', blob2: 'bg-slate-200/10' },
+    id: 'veg-powder',
+    title: 'Vegetable Powder Range',
+    icon: <Sparkles className="w-6 h-6" />,
+    description: 'Nutrient-dense powders for smoothies and cooking.',
+    theme: { blob1: 'bg-pink-600/20', blob2: 'bg-rose-500/20' },
+    catImage: '/categories/veg-powder.jpg',
     products: [
-      {
-        id: 'virgin-oil',
-        name: 'Virgin Coconut Oil',
-        description: 'Cold-pressed, unrefined organic coconut oil. Ideal for cooking, hair care, and skin moisturizing.',
-        image: 'https://placehold.co/600x600/1a3a3a/fbbf24?text=Coconut+Oil',
-        tags: ['Superfood', 'Beauty']
-      },
-      {
-        id: 'coconut-milk',
-        name: 'Organic Coconut Milk',
-        description: 'Rich and creamy milk extracted from fresh organic coconuts. A staple for curries and smoothies.',
-        image: 'https://placehold.co/600x600/1a3a3a/fbbf24?text=Coconut+Milk',
-        tags: ['Cooking', 'Dairy-Free']
-      }
+      { id: 'beetroot-p', name: 'Beetroot Powder', description: 'Available in 100g, 200g. Natural color and nutrition.', image: '/products/beetroot-p.jpg', tags: ['100g', '200g'] },
+      { id: 'carrot-p', name: 'Carrot Powder', description: 'Available in 100g, 200g. Rich in Vitamin A.', image: '/products/carrot-p.jpg', tags: ['100g', '200g'] },
+      { id: 'moringa-p', name: 'Moringa Powder', description: 'Available in 100g, 200g. The ultimate superfood powder.', image: '/products/moringa-p.jpg', tags: ['100g', '200g'] },
+      { id: 'curry-p', name: 'Curry Leaves Powder', description: 'Available in 100g, 200g. Concentrated aroma and flavor.', image: '/products/curry-p.jpg', tags: ['100g', '200g'] },
+      { id: 'tomato-p', name: 'Tomato Powder', description: 'Available in 100g, 200g. Tangy and versatile.', image: '/products/tomato-p.jpg', tags: ['100g', '200g'] },
+      { id: 'pumpkin-p', name: 'Pumpkin Powder', description: 'Available in 100g, 200g. Sweet and nutritious.', image: '/products/pumpkin-p.jpg', tags: ['100g', '200g'] }
     ]
   },
   {
-    id: 'spices',
-    title: 'Spices & Herbs',
+    id: 'spices-range',
+    title: 'Spices Range',
     icon: <Utensils className="w-6 h-6" />,
-    description: 'Aromatic spices to elevate your culinary creations.',
-    theme: { blob1: 'bg-red-600/20', blob2: 'bg-amber-600/20' },
+    description: 'Aromatic spices in bulk packs.',
+    theme: { blob1: 'bg-red-700/20', blob2: 'bg-orange-800/20' },
+    catImage: '/categories/spices.jpg',
     products: [
-      {
-        id: 'cinnamon',
-        name: 'Ceylon Cinnamon Sticks',
-        description: 'True Ceylon Cinnamon (Alba grade). Sweet, aromatic, and packed with antioxidants. Distinct from Cassia.',
-        image: 'https://placehold.co/600x600/3a1a1a/fbbf24?text=Cinnamon',
-        tags: ['Premium', 'Spice']
-      },
-      {
-        id: 'black-pepper',
-        name: 'Organic Black Pepper',
-        description: 'Whole black peppercorns sun-dried to retain their bold, spicy heat.',
-        image: 'https://placehold.co/600x600/1a1a1a/fbbf24?text=Pepper',
-        tags: ['Hot', 'Spice']
-      }
+      { id: 'fenugreek', name: 'Fenugreek', description: '100g, 200g.', image: '/products/fenugreek.jpg', tags: ['100g', '200g'] },
+      { id: 'cumin', name: 'Cumin Seeds', description: '100g, 200g.', image: '/products/cumin.jpg', tags: ['100g', '200g'] },
+      { id: 'mustard', name: 'Mustard Seeds', description: '100g, 200g.', image: '/products/mustard.jpg', tags: ['100g', '200g'] },
+      { id: 'turmeric', name: 'Turmeric Powder', description: '100g, 200g, 500g.', image: '/products/turmeric.jpg', tags: ['Bulk'] },
+      { id: 'chili-p', name: 'Chili Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/chili-p.jpg', tags: ['Bulk'] },
+      { id: 'chili-f', name: 'Chili Flakes', description: '100g, 200g, 500g, 1kg.', image: '/products/chili-f.jpg', tags: ['Bulk'] },
+      { id: 'pepper-p', name: 'Black Pepper Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/pepper-p.jpg', tags: ['Bulk'] },
+      { id: 'curry-pwdr', name: 'Curry Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/curry-pwdr.jpg', tags: ['Bulk'] },
+      { id: 'roasted-curry', name: 'Roasted Curry Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/roasted-curry.jpg', tags: ['Bulk'] },
+      { id: 'cinnamon-p', name: 'Cinnamon Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/cinnamon-p.jpg', tags: ['Bulk'] },
+      { id: 'pepper-corns', name: 'Black Pepper Corns', description: '50g, 100g, 200g, 500g, 1kg.', image: '/products/pepper-corns.jpg', tags: ['Bulk'] },
+      { id: 'pepper-cracked', name: 'Black Pepper Cracked', description: '100g, 200g, 500g, 1kg.', image: '/products/pepper-cracked.jpg', tags: ['Bulk'] }
+    ]
+  },
+  {
+    id: 'spices-glass',
+    title: 'Spices (Glass Bottle)',
+    icon: <Droplet className="w-6 h-6" />,
+    description: 'Premium spices in elegant glass packaging.',
+    theme: { blob1: 'bg-amber-600/20', blob2: 'bg-yellow-600/20' },
+    catImage: '/categories/spices-glass.jpg',
+    products: [
+      { id: 'cardamom-pods', name: 'Cardamom Pods', description: '30g Bottle.', image: '/products/cardamom-pods.jpg', tags: ['30g'] },
+      { id: 'cardamom-seeds', name: 'Cardamom Seeds', description: '45g Bottle.', image: '/products/cardamom-seeds.jpg', tags: ['45g'] },
+      { id: 'cinnamon-flakes', name: 'Cinnamon Flakes', description: '30g Bottle.', image: '/products/cinnamon-flakes.jpg', tags: ['30g'] },
+      { id: 'citrus-p', name: 'Citrus Powder', description: '35g Bottle.', image: '/products/citrus-p.jpg', tags: ['35g'] },
+      { id: 'clove-p', name: 'Clove Powder', description: '35g Bottle.', image: '/products/clove-p.jpg', tags: ['35g'] },
+      { id: 'coriander-p', name: 'Coriander Powder', description: '35g Bottle.', image: '/products/coriander-p.jpg', tags: ['35g'] },
+      { id: 'cumin-s', name: 'Cumin Seeds', description: '50g Bottle.', image: '/products/cumin-s.jpg', tags: ['50g'] },
+      { id: 'curry-p-glass', name: 'Curry Powder', description: '40g Bottle.', image: '/products/curry-p-glass.jpg', tags: ['40g'] },
+      { id: 'fennel-p', name: 'Fennel Powder', description: '40g Bottle.', image: '/products/fennel-p.jpg', tags: ['40g'] },
+      { id: 'fennel-s', name: 'Fennel Seeds', description: '45g Bottle.', image: '/products/fennel-s.jpg', tags: ['45g'] },
+      { id: 'fenugreek-s', name: 'Fenugreek Seeds', description: '80g Bottle.', image: '/products/fenugreek-s.jpg', tags: ['80g'] },
+      { id: 'garlic-p', name: 'Garlic Powder', description: '50g Bottle.', image: '/products/garlic-p.jpg', tags: ['50g'] },
+      { id: 'garlic-s', name: 'Garlic Slices', description: '30g Bottle.', image: '/products/garlic-s.jpg', tags: ['30g'] },
+      { id: 'gotukola', name: 'Gotukola Flakes', description: '10g Bottle.', image: '/products/gotukola.jpg', tags: ['10g'] },
+      { id: 'mace-ground', name: 'Ground Mace', description: '35g Bottle.', image: '/products/mace-ground.jpg', tags: ['35g'] },
+      { id: 'lemongrass', name: 'Lemon Grass Flakes', description: '35g Bottle.', image: '/products/lemongrass.jpg', tags: ['35g'] },
+      { id: 'mint', name: 'Mint Flakes', description: '5g Bottle.', image: '/products/mint.jpg', tags: ['5g'] },
+      { id: 'moringa-leaf', name: 'Moringa Leaf Powder', description: '24g Bottle.', image: '/products/moringa-leaf.jpg', tags: ['24g'] },
+      { id: 'mustard-s', name: 'Mustard Seeds', description: '70g Bottle.', image: '/products/mustard-s.jpg', tags: ['70g'] },
+      { id: 'nutmeg', name: 'Nutmeg Grated', description: '30g Bottle.', image: '/products/nutmeg.jpg', tags: ['30g'] },
+      { id: 'roasted-curry-g', name: 'Roasted Curry Powder', description: '50g Bottle.', image: '/products/roasted-curry-g.jpg', tags: ['50g'] },
+      { id: 'sesame', name: 'Sesame Seeds', description: '60g Bottle.', image: '/products/sesame.jpg', tags: ['60g'] },
+      { id: 'turmeric-g', name: 'Turmeric Powder', description: '50g Bottle.', image: '/products/turmeric-g.jpg', tags: ['50g'] },
+      { id: 'uva-bw', name: 'Uva Black & White Peppercorns', description: '50g Bottle.', image: '/products/uva-bw.jpg', tags: ['50g'] },
+      { id: 'uva-w', name: 'Uva White Peppercorns', description: '60g Bottle.', image: '/products/uva-w.jpg', tags: ['60g'] },
+      { id: 'mace-whole', name: 'Whole Mace', description: '10g Bottle.', image: '/products/mace-whole.jpg', tags: ['10g'] },
+      { id: 'chili-g', name: 'Chili Powder', description: '40g Bottle.', image: '/products/chili-g.jpg', tags: ['40g'] }
+    ]
+  },
+  {
+    id: 'premium-tea',
+    title: 'Premium Tea Collection',
+    icon: <Coffee className="w-6 h-6" />,
+    description: 'Exquisite teas for the connoisseur.',
+    theme: { blob1: 'bg-purple-600/20', blob2: 'bg-indigo-500/20' },
+    catImage: '/categories/premium-tea.jpg',
+    products: [
+      { id: 'chai', name: 'Chai Tea', description: '250g Pack. Aromatic spiced tea blend.', image: '/products/chai.jpg', tags: ['250g'] },
+      { id: 'flower-tea', name: 'Flower Tea', description: '250g Pack. Delicate floral notes.', image: '/products/flower-tea.jpg', tags: ['250g'] },
+      { id: 'fruit-tea', name: 'Fruit Tea', description: '250g Pack. Infused with natural dried fruits.', image: '/products/fruit-tea.jpg', tags: ['250g'] },
+      { id: 'green-tea', name: 'Green Tea', description: '250g Pack. Rich in antioxidants.', image: '/products/green-tea.jpg', tags: ['250g'] },
+      { id: 'mango-tea', name: 'Mango Tea', description: '250g Pack. Tropical mango infusion.', image: '/products/mango-tea.jpg', tags: ['250g'] },
+      { id: 'purple-tea', name: 'Purple Tea', description: '250g Pack. Rare and exotic.', image: '/products/purple-tea.jpg', tags: ['250g'] },
+      { id: 'silver-tips', name: 'Silver Tips', description: '50g Pack. The pinnacle of Ceylon tea.', image: '/products/silver-tips.jpg', tags: ['50g'] }
+    ]
+  },
+  {
+    id: 'herbal-tea',
+    title: 'Herbal Tea Range',
+    icon: <Leaf className="w-6 h-6" />,
+    description: 'Traditional wellness brews.',
+    theme: { blob1: 'bg-teal-600/20', blob2: 'bg-cyan-600/20' },
+    catImage: '/categories/herbal-tea.jpg',
+    products: [
+      { id: 'bitter-tea', name: 'Bitter Gourd Tea', description: '25 Tea Bags. Supports blood sugar balance.', image: '/products/bitter-tea.jpg', tags: ['25 Bags'] },
+      { id: 'hathawariya', name: 'Hathawariya Tea', description: '25 Tea Bags. Asparagus racemosus blend.', image: '/products/hathawariya.jpg', tags: ['25 Bags'] },
+      { id: 'heen-bovitiya', name: 'Heen Bovitiya Tea', description: '25 Tea Bags. Osbeckia octandra for liver health.', image: '/products/heen-bovitiya.jpg', tags: ['25 Bags'] },
+      { id: 'iramusu', name: 'Iramusu Tea', description: '25 Tea Bags. Sarsaparilla root cooling tea.', image: '/products/iramusu.jpg', tags: ['25 Bags'] },
+      { id: 'polpala', name: 'Polpala Tea', description: '25 Tea Bags. Aerva lanata for kidney health.', image: '/products/polpala.jpg', tags: ['25 Bags'] },
+      { id: 'thebu', name: 'Thebu Tea', description: '25 Tea Bags. Costus speciosus leaf tea.', image: '/products/thebu.jpg', tags: ['25 Bags'] }
     ]
   }
 ];
@@ -594,12 +631,13 @@ const Branding = ({ lang, setLang, onViewChange }) => {
   return (
     <div className="flex items-center justify-between mb-8 relative z-50">
       <div className="flex items-center gap-2 cursor-pointer" onClick={() => onViewChange('home')}>
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20">
-          <Leaf className="text-white w-6 h-6" />
+        {/* Updated Logo using <img> tag */}
+        <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shadow-lg overflow-hidden">
+          <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
         </div>
         <div>
           <h1 className="text-xl font-bold text-white tracking-tight leading-none">{t.appTitle}</h1>
-          <p className="text-xs text-amber-400 font-medium tracking-widest uppercase">{t.appSubtitle}</p>
+          <p className="text-xs text-red-400 font-medium tracking-widest uppercase">{t.appSubtitle}</p>
         </div>
       </div>
 
@@ -607,7 +645,7 @@ const Branding = ({ lang, setLang, onViewChange }) => {
         {/* Store Locator Button */}
         <button 
           onClick={() => onViewChange('store-locator')}
-          className="bg-white/10 hover:bg-white/20 backdrop-blur-md p-2 rounded-full text-emerald-100 transition-all border border-white/5"
+          className="bg-white/10 hover:bg-white/20 backdrop-blur-md p-2 rounded-full text-red-100 transition-all border border-white/5"
           title={t.storeLocator}
         >
           <MapPin className="w-4 h-4" />
@@ -617,19 +655,19 @@ const Branding = ({ lang, setLang, onViewChange }) => {
         <div className="relative">
           <button 
             onClick={() => setShowLangMenu(!showLangMenu)}
-            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-3 py-2 rounded-full text-xs font-bold text-emerald-100 transition-all border border-white/5"
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-3 py-2 rounded-full text-xs font-bold text-red-100 transition-all border border-white/5"
           >
             <Globe className="w-4 h-4" />
             <span className="uppercase">{lang}</span>
           </button>
 
           {showLangMenu && (
-            <div className="absolute right-0 top-full mt-2 w-48 bg-[#0f1710] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fadeIn h-64 overflow-y-auto custom-scrollbar">
+            <div className="absolute right-0 top-full mt-2 w-48 bg-[#2a0a0a] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fadeIn h-64 overflow-y-auto custom-scrollbar">
               {Object.keys(TRANSLATIONS).map((code) => (
                 <button
                   key={code}
                   onClick={() => { setLang(code); setShowLangMenu(false); }}
-                  className={`w-full text-left px-4 py-3 text-sm hover:bg-white/10 transition-colors border-b border-white/5 last:border-0 ${lang === code ? 'text-amber-400 font-bold' : 'text-white/60'}`}
+                  className={`w-full text-left px-4 py-3 text-sm hover:bg-white/10 transition-colors border-b border-white/5 last:border-0 ${lang === code ? 'text-red-400 font-bold' : 'text-white/60'}`}
                 >
                   {TRANSLATIONS[code].label}
                 </button>
@@ -651,16 +689,21 @@ const CategoryCard = ({ category, onClick, lang }) => {
       onClick={() => onClick(category)}
       className="group w-full cursor-pointer"
     >
-      <div className="relative w-full text-left overflow-hidden rounded-3xl bg-white/5 border border-white/10 hover:border-amber-500/50 transition-colors duration-500 shadow-xl">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="p-6 relative z-10">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-900/50 to-emerald-800/50 border border-white/5 flex items-center justify-center mb-4 text-emerald-400 group-hover:text-amber-400 group-hover:scale-110 transition-all duration-500">
+      <div className="relative w-full text-left overflow-hidden rounded-3xl bg-white/5 border border-white/10 hover:border-red-500/50 transition-colors duration-500 shadow-xl h-64">
+        {/* Background Image for Category */}
+        <div className="absolute inset-0">
+          <img src={category.catImage || `https://placehold.co/600x400/3f0e0e/red?text=${localCat.title}`} alt={localCat.title} className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+        </div>
+        
+        <div className="absolute bottom-0 left-0 w-full p-6 relative z-10">
+          <div className="w-12 h-12 rounded-2xl bg-red-900/50 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-4 text-red-200 group-hover:text-white group-hover:scale-110 transition-all duration-500">
             {category.icon}
           </div>
           <h3 className="text-2xl font-bold text-white mb-2 translate-z-10 group-hover:translate-x-1 transition-transform">{localCat.title}</h3>
-          <p className="text-emerald-200/60 text-sm leading-relaxed">{localCat.description}</p>
+          <p className="text-red-100/70 text-sm leading-relaxed line-clamp-2">{localCat.description}</p>
           
-          <div className="mt-6 flex items-center text-amber-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+          <div className="mt-4 flex items-center text-red-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
             <span>{t.explore}</span>
             <ChevronLeft className="w-4 h-4 rotate-180 ml-1" />
           </div>
@@ -678,23 +721,23 @@ const ProductCard = ({ product, onClick, lang }) => {
       onClick={() => onClick(product)}
       className="group w-full cursor-pointer"
     >
-      <div className="w-full text-left bg-white/5 rounded-2xl border border-white/10 overflow-hidden hover:border-amber-500/30 transition-colors duration-300">
+      <div className="w-full text-left bg-white/5 rounded-2xl border border-white/10 overflow-hidden hover:border-red-500/30 transition-colors duration-300">
         <div className="aspect-[4/3] overflow-hidden relative">
           <img 
             src={product.image} 
             alt={localProd.name} 
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
           />
-          <div className="absolute top-3 left-3 flex gap-2">
+          <div className="absolute top-3 left-3 flex gap-2 flex-wrap">
             {product.tags.map(tag => (
-              <span key={tag} className="px-2 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] uppercase tracking-wider text-amber-400 font-bold border border-white/10">
+              <span key={tag} className="px-2 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] uppercase tracking-wider text-red-400 font-bold border border-white/10">
                 {tag}
               </span>
             ))}
           </div>
         </div>
         <div className="p-4">
-          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">{localProd.name}</h3>
+          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-red-400 transition-colors">{localProd.name}</h3>
           <p className="text-xs text-white/50 line-clamp-2">{localProd.description}</p>
         </div>
       </div>
@@ -708,9 +751,9 @@ const AIOutput = ({ type, content, loading, onClose, lang }) => {
 
   return (
     <div className="mt-6 animate-fadeIn">
-      <div className="rounded-2xl bg-gradient-to-br from-emerald-900/40 to-black border border-amber-500/30 overflow-hidden shadow-2xl">
+      <div className="rounded-2xl bg-gradient-to-br from-red-900/40 to-black border border-red-500/30 overflow-hidden shadow-2xl">
         <div className="p-4 bg-white/5 border-b border-white/5 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-amber-400 font-bold">
+          <div className="flex items-center gap-2 text-red-400 font-bold">
             <Sparkles className="w-4 h-4" />
             <span>{t.wellness}</span>
           </div>
@@ -721,12 +764,12 @@ const AIOutput = ({ type, content, loading, onClose, lang }) => {
         <div className="p-6">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-8 gap-3">
-              <Loader2 className="w-8 h-8 text-amber-400 animate-spin" />
-              <p className="text-sm text-emerald-200/60 animate-pulse">{t.aiLoading}</p>
+              <Loader2 className="w-8 h-8 text-red-400 animate-spin" />
+              <p className="text-sm text-red-200/60 animate-pulse">{t.aiLoading}</p>
             </div>
           ) : (
             <div className="prose prose-invert prose-sm max-w-none">
-              <div className="whitespace-pre-line text-emerald-100/90 leading-relaxed font-light">
+              <div className="whitespace-pre-line text-red-100/90 leading-relaxed font-light">
                 {content}
               </div>
             </div>
@@ -740,7 +783,7 @@ const AIOutput = ({ type, content, loading, onClose, lang }) => {
 const ShareToast = ({ show, lang }) => {
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   return (
-    <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 bg-amber-500 text-black px-6 py-3 rounded-full font-bold shadow-2xl shadow-amber-500/20 transform transition-all duration-300 z-50 flex items-center gap-2 ${show ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+    <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 bg-red-600 text-white px-6 py-3 rounded-full font-bold shadow-2xl shadow-red-500/20 transform transition-all duration-300 z-50 flex items-center gap-2 ${show ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
       <Share2 className="w-4 h-4" />
       <span>Link Copied!</span>
     </div>
@@ -758,8 +801,8 @@ const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [lang, setLang] = useState('en');
   
-  // Theme State
-  const [theme, setTheme] = useState({ blob1: 'bg-emerald-500/10', blob2: 'bg-amber-500/5' });
+  // Theme State - Default to Red/Rose theme
+  const [theme, setTheme] = useState({ blob1: 'bg-red-500/10', blob2: 'bg-rose-500/5' });
 
   // AI State
   const [aiMode, setAiMode] = useState(null); 
@@ -798,7 +841,7 @@ const App = () => {
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
-    // Apply dynamic theme if it exists in data
+    // Apply dynamic theme if it exists in data, otherwise default
     if (category.theme) {
       setTheme(category.theme);
     }
@@ -817,7 +860,7 @@ const App = () => {
       setView('category');
     } else {
       // Revert to default theme when going home
-      setTheme({ blob1: 'bg-emerald-500/10', blob2: 'bg-amber-500/5' });
+      setTheme({ blob1: 'bg-red-500/10', blob2: 'bg-rose-500/5' });
       setView('home');
       setActiveCategory(null);
     }
@@ -826,7 +869,7 @@ const App = () => {
   // Explicit handler for view changes (for Store Locator nav)
   const handleViewChange = (newView) => {
     if (newView === 'home') {
-       setTheme({ blob1: 'bg-emerald-500/10', blob2: 'bg-amber-500/5' });
+       setTheme({ blob1: 'bg-red-500/10', blob2: 'bg-rose-500/5' });
        setActiveCategory(null);
     }
     setView(newView);
@@ -834,7 +877,7 @@ const App = () => {
 
   const handleShare = async () => {
     const shareData = {
-      title: 'Organic Foods Lanka',
+      title: 'Everbolt Foods',
       text: activeProduct ? `Check out this ${activeProduct.name}` : 'Check out our organic catalog!',
       url: window.location.href,
     };
@@ -903,12 +946,13 @@ const App = () => {
   const renderLanguageSelect = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen px-4 animate-fadeIn">
-        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20 mb-8 animate-bounce">
-          <Leaf className="text-white w-8 h-8" />
+        {/* Updated Logo using <img> tag */}
+        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-red-500 to-rose-700 flex items-center justify-center shadow-lg shadow-red-500/20 mb-8 animate-bounce p-2">
+           <img src="/logo.png" alt="Logo" className="w-full h-full object-contain brightness-0 invert" />
         </div>
         
         <h1 className="text-3xl font-bold text-white mb-2 text-center">Welcome</h1>
-        <p className="text-emerald-100/60 mb-10 text-center max-w-sm">
+        <p className="text-red-200/60 mb-10 text-center max-w-sm">
           Please select your preferred language to begin your organic journey.
         </p>
 
@@ -917,17 +961,17 @@ const App = () => {
             <button
               key={code}
               onClick={() => handleLanguageSelect(code)}
-              className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/50 hover:bg-white/10 transition-all duration-300 p-4 text-center"
+              className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:border-red-500/50 hover:bg-white/10 transition-all duration-300 p-4 text-center"
             >
               <div className="flex flex-col items-center gap-2 relative z-10">
-                <span className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                <span className="text-xl font-bold text-white group-hover:text-red-400 transition-colors">
                   {TRANSLATIONS[code].label}
                 </span>
                 <span className="text-xs text-white/40 uppercase tracking-widest">{code}</span>
               </div>
               
               {/* Hover Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
           ))}
         </div>
@@ -943,7 +987,7 @@ const App = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 mb-4 whitespace-pre-line">
             {t.heroTitle}
           </h2>
-          <p className="text-emerald-100/60 max-w-md text-lg">
+          <p className="text-red-100/60 max-w-md text-lg">
             {t.heroSubtitle}
           </p>
         </div>
@@ -961,7 +1005,7 @@ const App = () => {
     const localCat = getLocalizedContent(activeCategory, lang);
     return (
       <div className="animate-slideUp">
-        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#0f1710]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
+        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#2a0a0a]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
           <button onClick={goBack} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
             <ChevronLeft className="w-6 h-6" />
           </button>
@@ -975,9 +1019,9 @@ const App = () => {
           ))}
         </div>
         
-        <div className="mt-12 p-8 rounded-3xl bg-emerald-900/10 border border-emerald-500/10 text-center">
-          <Leaf className="w-8 h-8 text-emerald-500 mx-auto mb-3 opacity-50" />
-          <p className="text-emerald-200/40 text-sm">100% Organic Certified • Sustainably Sourced</p>
+        <div className="mt-12 p-8 rounded-3xl bg-red-900/10 border border-red-500/10 text-center">
+          <Leaf className="w-8 h-8 text-red-500 mx-auto mb-3 opacity-50" />
+          <p className="text-red-200/40 text-sm">100% Organic Certified • Sustainably Sourced</p>
         </div>
       </div>
     );
@@ -1004,12 +1048,12 @@ const App = () => {
             alt={localProduct.name} 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f1710] via-transparent to-transparent opacity-90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2a0a0a] via-transparent to-transparent opacity-90" />
           
           <div className="absolute bottom-0 left-0 w-full p-8">
             <div className="flex flex-wrap gap-2 mb-4">
               {activeProduct.tags.map(tag => (
-                <span key={tag} className="px-3 py-1 rounded-full bg-amber-500 text-black text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-500/20">
+                <span key={tag} className="px-3 py-1 rounded-full bg-red-600 text-white text-xs font-bold uppercase tracking-wider shadow-lg shadow-red-500/20">
                   {tag}
                 </span>
               ))}
@@ -1022,14 +1066,14 @@ const App = () => {
         <div className="p-8 max-w-2xl mx-auto">
           <div className="flex items-start justify-between gap-4 mb-6">
             <div className="prose prose-invert flex-1">
-              <h3 className="text-amber-400 text-sm font-bold uppercase tracking-widest mb-4">{t.description}</h3>
-              <p className="text-xl text-emerald-100/80 leading-relaxed font-light">
+              <h3 className="text-red-400 text-sm font-bold uppercase tracking-widest mb-4">{t.description}</h3>
+              <p className="text-xl text-red-100/80 leading-relaxed font-light">
                 {localProduct.description}
               </p>
             </div>
             <button 
               onClick={handleTTS}
-              className={`flex-shrink-0 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center transition-all ${isPlaying ? 'bg-amber-500 text-black animate-pulse' : 'bg-white/5 text-emerald-400 hover:bg-white/10'}`}
+              className={`flex-shrink-0 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center transition-all ${isPlaying ? 'bg-red-600 text-white animate-pulse' : 'bg-white/5 text-red-400 hover:bg-white/10'}`}
             >
               {isPlaying ? <StopCircle className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
             </button>
@@ -1039,7 +1083,7 @@ const App = () => {
           <div className="mb-8">
             <button 
               onClick={handleGenerateBenefits}
-              className={`w-full p-4 rounded-xl border border-white/10 flex items-center justify-center gap-3 transition-all ${aiMode === 'benefits' ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400' : 'bg-white/5 hover:bg-white/10 text-white'}`}
+              className={`w-full p-4 rounded-xl border border-white/10 flex items-center justify-center gap-3 transition-all ${aiMode === 'benefits' ? 'bg-red-500/20 border-red-500 text-red-400' : 'bg-white/5 hover:bg-white/10 text-white'}`}
             >
               <HeartPulse className="w-6 h-6" />
               <span className="text-sm font-bold tracking-wide">{t.benefits}</span>
@@ -1056,7 +1100,7 @@ const App = () => {
           />
 
           <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
-              <Info className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-1" />
+              <Info className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
               <div>
                   <h4 className="text-white font-bold text-sm mb-1">{t.originTitle}</h4>
                   <p className="text-white/40 text-xs">{t.originText}</p>
@@ -1065,7 +1109,7 @@ const App = () => {
         </div>
 
         {/* Bottom Action Bar */}
-        <div className="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#0f1710] to-transparent z-30 flex justify-center">
+        <div className="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#2a0a0a] to-transparent z-30 flex justify-center">
           <button 
             onClick={handleShare}
             className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold shadow-[0_0_30px_-10px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 transition-all"
@@ -1082,7 +1126,7 @@ const App = () => {
     const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
     return (
       <div className="animate-slideUp min-h-screen">
-        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#0f1710]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
+        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#2a0a0a]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
           <button onClick={() => handleViewChange('home')} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
             <ChevronLeft className="w-6 h-6" />
           </button>
@@ -1105,7 +1149,7 @@ const App = () => {
              ></iframe>
              <div className="p-6">
                <div className="flex items-start gap-4 mb-4">
-                 <div className="p-3 rounded-full bg-emerald-500/20 text-emerald-400">
+                 <div className="p-3 rounded-full bg-red-500/20 text-red-400">
                    <MapPin className="w-6 h-6" />
                  </div>
                  <div>
@@ -1118,7 +1162,7 @@ const App = () => {
                  href="https://www.google.com/maps/search/?api=1&query=No.548/B+Nawala+Rd,+Sri+Jayawardenepura+Kotte+10100" 
                  target="_blank" 
                  rel="noreferrer"
-                 className="w-full py-3 bg-amber-500 text-black font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-amber-400 transition-colors"
+                 className="w-full py-3 bg-red-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-red-500 transition-colors"
                >
                  <MapPin className="w-4 h-4" />
                  {t.directions}
@@ -1129,14 +1173,14 @@ const App = () => {
           {/* Contact Info */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
-              <Clock className="w-8 h-8 text-emerald-400" />
+              <Clock className="w-8 h-8 text-red-400" />
               <div>
                 <h4 className="text-white font-bold">Opening Hours</h4>
                 <p className="text-white/40 text-sm">Daily: 8:00 AM - 8:00 PM</p>
               </div>
             </div>
             <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
-              <Phone className="w-8 h-8 text-amber-400" />
+              <Phone className="w-8 h-8 text-red-400" />
               <div>
                 <h4 className="text-white font-bold">Contact Us</h4>
                 <p className="text-white/40 text-sm">+94 11 234 5678</p>
@@ -1148,10 +1192,10 @@ const App = () => {
     );
   };
 
-  if (!isLoaded) return <div className="min-h-screen bg-[#0f1710]" />;
+  if (!isLoaded) return <div className="min-h-screen bg-[#2a0a0a]" />;
 
   return (
-    <div className="min-h-screen bg-[#0f1710] text-white font-sans selection:bg-amber-500/30 transition-colors duration-1000">
+    <div className="min-h-screen bg-[#2a0a0a] text-white font-sans selection:bg-red-500/30 transition-colors duration-1000">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
