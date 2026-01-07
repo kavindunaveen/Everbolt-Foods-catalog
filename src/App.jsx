@@ -83,8 +83,8 @@ const TRANSLATIONS = {
   },
   si: {
     label: "සිංහල",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: " සොබාදහමේ අග්‍රගණ්‍ය,\nඩිජිටල්කරණය වූ.",
     heroSubtitle: "ශ්‍රී ලංකාවේ හදවතින්ම එන අපගේ වාරික කාබනික තේ, කුළුබඩු සහ වියළි පලතුරු පරාසය ගවේෂණය කරන්න.",
     explore: "එකතුව ගවේෂණය කරන්න",
@@ -138,8 +138,8 @@ const TRANSLATIONS = {
   },
   ta: {
     label: "தமிழ்",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "இயற்கையின் சிறந்தது,\nஇலக்கமயமாக.",
     heroSubtitle: "இலங்கையின் இதயத்திலிருந்து எங்கள் பிரீமியம் ஆர்கானிக் தேநீர், மசாலா மற்றும் உலர்ந்த பழங்களை ஆராயுங்கள்.",
     explore: "சேகரிப்பை ஆராயுங்கள்",
@@ -175,8 +175,8 @@ const TRANSLATIONS = {
   },
   es: {
     label: "Español",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "Lo Mejor de la Naturaleza,\nCurado Digitalmente.",
     heroSubtitle: "Explore nuestra gama premium de tés orgánicos, especias y frutas secas desde el corazón de Sri Lanka.",
     explore: "Explorar Colección",
@@ -196,8 +196,8 @@ const TRANSLATIONS = {
   },
   fr: {
     label: "Français",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "Le Meilleur de la Nature,\nSélectionné Numériquement.",
     heroSubtitle: "Découvrez notre gamme premium de thés biologiques, d'épices et de fruits secs du cœur du Sri Lanka.",
     explore: "Explorer la Collection",
@@ -217,8 +217,8 @@ const TRANSLATIONS = {
   },
   de: {
     label: "Deutsch",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "Das Beste der Natur,\nDigital Kuratiert.",
     heroSubtitle: "Entdecken Sie unser Premium-Sortiment an Bio-Tees, Gewürzen und Trockenfrüchten aus dem Herzen Sri Lankas.",
     explore: "Kollektion Entdecken",
@@ -238,8 +238,8 @@ const TRANSLATIONS = {
   },
   zh: {
     label: "中文",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "大自然的恩赐，\n数字化呈现。",
     heroSubtitle: "探索来自斯里兰卡中心的优质有机茶、香料和干果系列。",
     explore: "探索系列",
@@ -259,8 +259,8 @@ const TRANSLATIONS = {
   },
   ar: {
     label: "العربية",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "أفضل ما في الطبيعة،\nمنسقة رقمياً.",
     heroSubtitle: "استكشف مجموعتنا المتميزة من الشاي العضوي والتوابل والفواكه المجففة من قلب سريلانكا.",
     explore: "استكشاف المجموعة",
@@ -280,8 +280,8 @@ const TRANSLATIONS = {
   },
   ja: {
     label: "日本語",
-    appTitle: "ORGANIC",
-    appSubtitle: "Foods Lanka",
+    appTitle: "Everbolt",
+    appSubtitle: "Food Products (Pvt) Ltd",
     heroTitle: "自然の恵みを、\nデジタルで厳選。",
     heroSubtitle: "スリランカの中心部からお届けする、プレミアムなオーガニックティー、スパイス、ドライフルーツをご覧ください。",
     explore: "コレクションを見る",
@@ -323,13 +323,13 @@ const CATALOG_DATA = [
     description: 'Preserved nutrition for your daily meals.',
     theme: { blob1: 'bg-green-600/20', blob2: 'bg-emerald-700/20' },
     // Category Image Placeholder
-    catImage: '/categories/ca1.jpg',
+    catImage: '/categories/dryveg.png',
     products: [
-      { id: 'jackfruit', name: 'Dried Jackfruit', description: 'Available in 50g, 100g. Pure dehydrated jackfruit.', image: '/products/jackfruit.jpg', tags: ['50g', '100g'] },
-      { id: 'breadfruit', name: 'Dried Breadfruit', description: 'Available in 50g, 100g. Authentic dehydrated breadfruit.', image: '/products/breadfruit.jpg', tags: ['50g', '100g'] },
-      { id: 'bittergourd', name: 'Dried Bitter Gourd', description: 'Available in 50g, 100g. Sun-dried organic bitter gourd slices.', image: '/products/bittergourd.jpg', tags: ['50g', '100g'] },
-      { id: 'curry-leaves-dry', name: 'Dried Curry Leaves', description: 'Available in 50g, 100g. Aromatic dried leaves.', image: '/products/curry-leaves-dry.jpg', tags: ['50g', '100g'] },
-      { id: 'leeks', name: 'Dried Leeks', description: 'Available in 50g, 100g. Dehydrated leeks for soups and garnishing.', image: '/products/leeks.jpg', tags: ['50g', '100g'] }
+      { id: 'jackfruit', name: 'Dried Jackfruit', description: 'Available in 50g, 100g. Pure dehydrated jackfruit.', image: '/products/jackfruit.png', tags: ['50g', '100g'] },
+      { id: 'breadfruit', name: 'Dried Breadfruit', description: 'Available in 50g, 100g. Authentic dehydrated breadfruit.', image: '/products/breadfruit.png', tags: ['50g', '100g'] },
+      { id: 'bittergourd', name: 'Dried Bitter Gourd', description: 'Available in 50g, 100g. Sun-dried organic bitter gourd slices.', image: '/products/bittergourd.png', tags: ['50g', '100g'] },
+      { id: 'curry-leaves-dry', name: 'Dried Curry Leaves', description: 'Available in 50g, 100g. Aromatic dried leaves.', image: '/products/curry-leaves-dry.png', tags: ['50g', '100g'] },
+      { id: 'leeks', name: 'Dried Leeks', description: 'Available in 50g, 100g. Dehydrated leeks for soups and garnishing.', image: '/products/leeks.png', tags: ['50g', '100g'] }
     ]
   },
   {
@@ -338,12 +338,12 @@ const CATALOG_DATA = [
     icon: <Sun className="w-6 h-6" />,
     description: 'Nature’s candy, dehydrated to perfection.',
     theme: { blob1: 'bg-orange-500/20', blob2: 'bg-yellow-500/20' },
-    catImage: '/categories/dried-fruit.jpg',
+    catImage: '/categories/dryfood.png',
     products: [
-      { id: 'pineapple', name: 'Dried Pineapple', description: 'Available in 50g, 100g. Tropical sweetness in every bite.', image: '/products/pineapple.jpg', tags: ['50g', '100g'] },
-      { id: 'papaya', name: 'Dried Papaya', description: 'Available in 50g, 100g. Naturally sweet dried papaya.', image: '/products/papaya.jpg', tags: ['50g', '100g'] },
-      { id: 'banana', name: 'Dried Banana', description: 'Available in 50g, 100g. Chewy and rich in energy.', image: '/products/banana.jpg', tags: ['50g', '100g'] },
-      { id: 'mango', name: 'Dried Mango', description: 'Available in 50g, 100g. The king of fruits, dehydrated.', image: '/products/mango.jpg', tags: ['50g', '100g'] }
+      { id: 'pineapple', name: 'Dried Pineapple', description: 'Available in 50g, 100g. Tropical sweetness in every bite.', image: '/products/pineapple.png', tags: ['50g', '100g'] },
+      { id: 'papaya', name: 'Dried Papaya', description: 'Available in 50g, 100g. Naturally sweet dried papaya.', image: '/products/papaya.png', tags: ['50g', '100g'] },
+      { id: 'banana', name: 'Dried Banana', description: 'Available in 50g, 100g. Chewy and rich in energy.', image: '/products/banana.png', tags: ['50g', '100g'] },
+      { id: 'mango', name: 'Dried Mango', description: 'Available in 50g, 100g. The king of fruits, dehydrated.', image: '/products/mango.png', tags: ['50g', '100g'] }
     ]
   },
   {
@@ -352,14 +352,14 @@ const CATALOG_DATA = [
     icon: <Sparkles className="w-6 h-6" />,
     description: 'Nutrient-dense powders for smoothies and cooking.',
     theme: { blob1: 'bg-pink-600/20', blob2: 'bg-rose-500/20' },
-    catImage: '/categories/veg-powder.jpg',
+    catImage: '/categories/currypowder.png',
     products: [
-      { id: 'beetroot-p', name: 'Beetroot Powder', description: 'Available in 100g, 200g. Natural color and nutrition.', image: '/products/beetroot-p.jpg', tags: ['100g', '200g'] },
-      { id: 'carrot-p', name: 'Carrot Powder', description: 'Available in 100g, 200g. Rich in Vitamin A.', image: '/products/carrot-p.jpg', tags: ['100g', '200g'] },
-      { id: 'moringa-p', name: 'Moringa Powder', description: 'Available in 100g, 200g. The ultimate superfood powder.', image: '/products/moringa-p.jpg', tags: ['100g', '200g'] },
-      { id: 'curry-p', name: 'Curry Leaves Powder', description: 'Available in 100g, 200g. Concentrated aroma and flavor.', image: '/products/curry-p.jpg', tags: ['100g', '200g'] },
-      { id: 'tomato-p', name: 'Tomato Powder', description: 'Available in 100g, 200g. Tangy and versatile.', image: '/products/tomato-p.jpg', tags: ['100g', '200g'] },
-      { id: 'pumpkin-p', name: 'Pumpkin Powder', description: 'Available in 100g, 200g. Sweet and nutritious.', image: '/products/pumpkin-p.jpg', tags: ['100g', '200g'] }
+      { id: 'beetroot-p', name: 'Beetroot Powder', description: 'Available in 100g, 200g. Natural color and nutrition.', image: '/products/beetroot-p.png', tags: ['100g', '200g'] },
+      { id: 'carrot-p', name: 'Carrot Powder', description: 'Available in 100g, 200g. Rich in Vitamin A.', image: '/products/carrot-p.png', tags: ['100g', '200g'] },
+      { id: 'moringa-p', name: 'Moringa Powder', description: 'Available in 100g, 200g. The ultimate superfood powder.', image: '/products/moringa-p.png', tags: ['100g', '200g'] },
+      { id: 'curry-p', name: 'Curry Leaves Powder', description: 'Available in 100g, 200g. Concentrated aroma and flavor.', image: '/products/curry-p.png', tags: ['100g', '200g'] },
+      { id: 'tomato-p', name: 'Tomato Powder', description: 'Available in 100g, 200g. Tangy and versatile.', image: '/products/tomato-p.png', tags: ['100g', '200g'] },
+      { id: 'pumpkin-p', name: 'Pumpkin Powder', description: 'Available in 100g, 200g. Sweet and nutritious.', image: '/products/pumpkin-p.png', tags: ['100g', '200g'] }
     ]
   },
   {
@@ -368,20 +368,20 @@ const CATALOG_DATA = [
     icon: <Utensils className="w-6 h-6" />,
     description: 'Aromatic spices in bulk packs.',
     theme: { blob1: 'bg-red-700/20', blob2: 'bg-orange-800/20' },
-    catImage: '/categories/spices.jpg',
+    catImage: '/categories/packets.jpg',
     products: [
-      { id: 'fenugreek', name: 'Fenugreek', description: '100g, 200g.', image: '/products/fenugreek.jpg', tags: ['100g', '200g'] },
-      { id: 'cumin', name: 'Cumin Seeds', description: '100g, 200g.', image: '/products/cumin.jpg', tags: ['100g', '200g'] },
-      { id: 'mustard', name: 'Mustard Seeds', description: '100g, 200g.', image: '/products/mustard.jpg', tags: ['100g', '200g'] },
-      { id: 'turmeric', name: 'Turmeric Powder', description: '100g, 200g, 500g.', image: '/products/turmeric.jpg', tags: ['Bulk'] },
-      { id: 'chili-p', name: 'Chili Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/chili-p.jpg', tags: ['Bulk'] },
-      { id: 'chili-f', name: 'Chili Flakes', description: '100g, 200g, 500g, 1kg.', image: '/products/chili-f.jpg', tags: ['Bulk'] },
-      { id: 'pepper-p', name: 'Black Pepper Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/pepper-p.jpg', tags: ['Bulk'] },
-      { id: 'curry-pwdr', name: 'Curry Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/curry-pwdr.jpg', tags: ['Bulk'] },
-      { id: 'roasted-curry', name: 'Roasted Curry Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/roasted-curry.jpg', tags: ['Bulk'] },
-      { id: 'cinnamon-p', name: 'Cinnamon Powder', description: '100g, 200g, 500g, 1kg.', image: '/products/cinnamon-p.jpg', tags: ['Bulk'] },
-      { id: 'pepper-corns', name: 'Black Pepper Corns', description: '50g, 100g, 200g, 500g, 1kg.', image: '/products/pepper-corns.jpg', tags: ['Bulk'] },
-      { id: 'pepper-cracked', name: 'Black Pepper Cracked', description: '100g, 200g, 500g, 1kg.', image: '/products/pepper-cracked.jpg', tags: ['Bulk'] }
+      { id: 'fenugreek', name: 'Fenugreek', description: '100g, 200g. Elevate your dishes with the natural goodness of our high-quality Fenugreek, offering the authentic, preservative-free flavor of premium Sri Lankan quality.', image: '/products/fenugreek.jpg', tags: ['100g', '200g'] },
+      { id: 'cumin', name: 'Cumin Seeds', description: '100g, 200g. Experience the natural purity of our Cumin Seeds, delivering the genuine, preservative-free taste of authentic Sri Lankan cuisine.', image: '/products/cumin.jpg', tags: ['100g', '200g'] },
+      { id: 'mustard', name: 'Mustard Seeds', description: '100g, 200g. Experience the sharp, natural pungency of our preservative-free Mustard Seeds, essential for the authentic taste of traditional Sri Lankan tempering.', image: '/products/mustard.jpg', tags: ['100g', '200g'] },
+      { id: 'turmeric', name: 'Turmeric Powder', description: '100g, 200g, 500g. Experience the golden standard of purity with our natural Turmeric Powder, essential for healthy and authentic Sri Lankan cooking.', image: '/products/turmeric.jpg', tags: ['Bulk'] },
+      { id: 'chili-p', name: 'Chili Powder', description: '100g, 200g, 500g, 1kg. Experience the standard of pure Sri Lankan flavor with our natural Chili Powder, delivering consistent heat and vibrant color without preservatives.', image: '/products/chili-p.jpg', tags: ['Bulk'] },
+      { id: 'chili-f', name: 'Chili Flakes', description: '100g, 200g, 500g, 1kg. Experience the bold crunch of our natural Chili Flakes, delivering the authentic heat and vibrant color of premium Sri Lankan quality.', image: '/products/chili-f.jpg', tags: ['Bulk'] },
+      { id: 'pepper-p', name: 'Black Pepper Powder', description: '100g, 200g, 500g, 1kg. Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-p.jpg', tags: ['Bulk'] },
+      { id: 'curry-pwdr', name: 'Curry Powder', description: '100g, 200g, 500g, 1kg. Experience the taste of tradition with our Curry Powder, expertly blended to deliver the authentic flavor, color, and aroma of Sri Lankan cuisine without added preservatives.', image: '/products/curry-pwdr.jpg', tags: ['Bulk'] },
+      { id: 'roasted-curry', name: 'Roasted Curry Powder', description: '100g, 200g, 500g, 1kg. Experience the taste of tradition with our Curry Powder, expertly blended to deliver the authentic flavor, color, and aroma of Sri Lankan cuisine without added preservatives.', image: '/products/roasted-curry.jpg', tags: ['Bulk'] },
+      { id: 'cinnamon-p', name: 'Cinnamon Powder', description: '100g, 200g, 500g, 1kg. xperience the warmth of Sri Lankan heritage with our finely ground Cinnamon Powder, offering a naturally sweet aroma and smooth flavor with no added colors or preservatives.', image: '/products/cinnamon-p.jpg', tags: ['Bulk'] },
+      { id: 'pepper-corns', name: 'Black Pepper Corns', description: '50g, 100g, 200g, 500g, 1kg. Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-corns.jpg', tags: ['Bulk'] },
+      { id: 'pepper-cracked', name: 'Black Pepper Cracked', description: '100g, 200g, 500g, 1kg.Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-cracked.jpg', tags: ['Bulk'] }
     ]
   },
   {
@@ -390,7 +390,7 @@ const CATALOG_DATA = [
     icon: <Droplet className="w-6 h-6" />,
     description: 'Premium spices in elegant glass packaging.',
     theme: { blob1: 'bg-amber-600/20', blob2: 'bg-yellow-600/20' },
-    catImage: '/categories/spices-glass.jpg',
+    catImage: '/categories/glassbottles.jpg',
     products: [
       { id: 'cardamom-pods', name: 'Cardamom Pods', description: '30g Bottle.', image: '/products/cardamom-pods.jpg', tags: ['30g'] },
       { id: 'cardamom-seeds', name: 'Cardamom Seeds', description: '45g Bottle.', image: '/products/cardamom-seeds.jpg', tags: ['45g'] },
@@ -458,9 +458,15 @@ const CATALOG_DATA = [
 
 // --- GEMINI API UTILITIES ---
 
-const apiKey = ""; // Runtime environment provides key
+// 🔴 IMPORTANT: PASTE YOUR GOOGLE GEMINI API KEY BELOW 🔴
+// Get one here: https://aistudio.google.com/app/apikey
+const apiKey = "PASTE_YOUR_API_KEY_HERE"; 
 
 async function callGeminiText(prompt) {
+  if (!apiKey || apiKey === "PASTE_YOUR_API_KEY_HERE") {
+    return "⚠️ API Key Missing. Please add your Gemini API Key in the code to enable AI features.";
+  }
+
   try {
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
@@ -630,14 +636,14 @@ const Branding = ({ lang, setLang, onViewChange }) => {
 
   return (
     <div className="flex items-center justify-between mb-8 relative z-50">
-      <div className="flex items-center gap-2 cursor-pointer" onClick={() => onViewChange('home')}>
-        {/* Updated Logo using <img> tag */}
-        <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shadow-lg overflow-hidden">
-          <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+      <div className="flex items-center gap-3 cursor-pointer" onClick={() => onViewChange('home')}>
+        {/* Logo: Larger, no box, drop shadow */}
+        <div className="w-20 h-20 md:w-24 md:h-24 flex-shrink-0">
+           <img src="/logo.png" alt="Logo" className="w-full h-full object-contain drop-shadow-2xl brightness-110" />
         </div>
         <div>
-          <h1 className="text-xl font-bold text-white tracking-tight leading-none">{t.appTitle}</h1>
-          <p className="text-xs text-red-400 font-medium tracking-widest uppercase">{t.appSubtitle}</p>
+          <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-none drop-shadow-lg">{t.appTitle}</h1>
+          <p className="text-[10px] md:text-xs text-red-400 font-bold tracking-[0.2em] uppercase drop-shadow-md mt-1">{t.appSubtitle}</p>
         </div>
       </div>
 
@@ -645,24 +651,24 @@ const Branding = ({ lang, setLang, onViewChange }) => {
         {/* Store Locator Button */}
         <button 
           onClick={() => onViewChange('store-locator')}
-          className="bg-white/10 hover:bg-white/20 backdrop-blur-md p-2 rounded-full text-red-100 transition-all border border-white/5"
+          className="bg-white/10 hover:bg-white/20 backdrop-blur-md p-3 rounded-full text-red-100 transition-all border border-white/5 active:scale-95"
           title={t.storeLocator}
         >
-          <MapPin className="w-4 h-4" />
+          <MapPin className="w-5 h-5" />
         </button>
 
         {/* Language Toggle */}
         <div className="relative">
           <button 
             onClick={() => setShowLangMenu(!showLangMenu)}
-            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-3 py-2 rounded-full text-xs font-bold text-red-100 transition-all border border-white/5"
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold text-red-100 transition-all border border-white/5 active:scale-95"
           >
             <Globe className="w-4 h-4" />
             <span className="uppercase">{lang}</span>
           </button>
 
           {showLangMenu && (
-            <div className="absolute right-0 top-full mt-2 w-48 bg-[#2a0a0a] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fadeIn h-64 overflow-y-auto custom-scrollbar">
+            <div className="absolute right-0 top-full mt-2 w-48 bg-[#2a0a0a] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fadeIn h-64 overflow-y-auto custom-scrollbar z-50">
               {Object.keys(TRANSLATIONS).map((code) => (
                 <button
                   key={code}
@@ -689,23 +695,37 @@ const CategoryCard = ({ category, onClick, lang }) => {
       onClick={() => onClick(category)}
       className="group w-full cursor-pointer"
     >
-      <div className="relative w-full text-left overflow-hidden rounded-3xl bg-white/5 border border-white/10 hover:border-red-500/50 transition-colors duration-500 shadow-xl h-64">
-        {/* Background Image for Category */}
-        <div className="absolute inset-0">
-          <img src={category.catImage || `https://placehold.co/600x400/3f0e0e/red?text=${localCat.title}`} alt={localCat.title} className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+      <div className="relative w-full h-80 text-left overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl shadow-black/50">
+        
+        {/* Background Image - Zoomed */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img 
+            src={category.catImage || `https://placehold.co/600x400/3f0e0e/red?text=${localCat.title}`} 
+            alt={localCat.title} 
+            className="w-full h-full object-cover scale-125 group-hover:scale-110 transition-transform duration-[1.5s] ease-in-out filter brightness-75 group-hover:brightness-90" 
+          />
+          {/* Stronger Gradient for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90" />
         </div>
         
-        <div className="absolute bottom-0 left-0 w-full p-6 relative z-10">
-          <div className="w-12 h-12 rounded-2xl bg-red-900/50 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-4 text-red-200 group-hover:text-white group-hover:scale-110 transition-all duration-500">
-            {category.icon}
+        {/* Content */}
+        <div className="absolute inset-0 p-6 flex flex-col justify-end relative z-10">
+          <div className="mb-auto">
+             <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-lg">
+              {category.icon}
+            </div>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-2 translate-z-10 group-hover:translate-x-1 transition-transform">{localCat.title}</h3>
-          <p className="text-red-100/70 text-sm leading-relaxed line-clamp-2">{localCat.description}</p>
           
-          <div className="mt-4 flex items-center text-red-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-            <span>{t.explore}</span>
-            <ChevronLeft className="w-4 h-4 rotate-180 ml-1" />
+          <div>
+            <h3 className="text-2xl font-black text-white mb-2 tracking-tight drop-shadow-lg leading-tight">{localCat.title}</h3>
+            <p className="text-white/80 text-xs font-medium leading-relaxed line-clamp-2 mb-3 drop-shadow-md">
+              {localCat.description}
+            </p>
+            
+            <div className="flex items-center text-red-400 text-xs font-bold uppercase tracking-wider group-hover:text-red-300 transition-colors">
+              <span>{t.explore}</span>
+              <ChevronLeft className="w-4 h-4 rotate-180 ml-1" />
+            </div>
           </div>
         </div>
       </div>
@@ -728,17 +748,17 @@ const ProductCard = ({ product, onClick, lang }) => {
             alt={localProd.name} 
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
           />
-          <div className="absolute top-3 left-3 flex gap-2 flex-wrap">
+          <div className="absolute top-3 left-3 flex gap-1 flex-wrap max-w-[80%]">
             {product.tags.map(tag => (
-              <span key={tag} className="px-2 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] uppercase tracking-wider text-red-400 font-bold border border-white/10">
+              <span key={tag} className="px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[9px] uppercase tracking-wider text-red-400 font-bold border border-white/10 shadow-sm">
                 {tag}
               </span>
             ))}
           </div>
         </div>
         <div className="p-4">
-          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-red-400 transition-colors">{localProd.name}</h3>
-          <p className="text-xs text-white/50 line-clamp-2">{localProd.description}</p>
+          <h3 className="text-base font-bold text-white mb-1 group-hover:text-red-400 transition-colors leading-tight">{localProd.name}</h3>
+          <p className="text-[10px] text-white/50 line-clamp-2">{localProd.description}</p>
         </div>
       </div>
     </TiltCard>
@@ -947,27 +967,27 @@ const App = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen px-4 animate-fadeIn">
         {/* Updated Logo using <img> tag */}
-        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-red-500 to-rose-700 flex items-center justify-center shadow-lg shadow-red-500/20 mb-8 animate-bounce p-2">
-           <img src="/logo.png" alt="Logo" className="w-full h-full object-contain brightness-0 invert" />
+        <div className="w-32 h-32 flex-shrink-0 mb-8 animate-bounce">
+           <img src="/logo.png" alt="Logo" className="w-full h-full object-contain drop-shadow-2xl brightness-110" />
         </div>
         
-        <h1 className="text-3xl font-bold text-white mb-2 text-center">Welcome</h1>
-        <p className="text-red-200/60 mb-10 text-center max-w-sm">
-          Please select your preferred language to begin your organic journey.
+        <h1 className="text-4xl font-black text-white mb-2 text-center tracking-tight">Welcome</h1>
+        <p className="text-red-200/60 mb-12 text-center max-w-sm text-sm font-medium">
+          Select your preferred language to begin your organic journey.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-lg">
+        <div className="grid grid-cols-2 gap-4 w-full max-w-md">
           {Object.keys(TRANSLATIONS).map((code) => (
             <button
               key={code}
               onClick={() => handleLanguageSelect(code)}
-              className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:border-red-500/50 hover:bg-white/10 transition-all duration-300 p-4 text-center"
+              className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/50 hover:bg-white/10 transition-all duration-300 p-6 text-center shadow-lg active:scale-95"
             >
               <div className="flex flex-col items-center gap-2 relative z-10">
-                <span className="text-xl font-bold text-white group-hover:text-red-400 transition-colors">
+                <span className="text-lg font-bold text-white group-hover:text-red-400 transition-colors">
                   {TRANSLATIONS[code].label}
                 </span>
-                <span className="text-xs text-white/40 uppercase tracking-widest">{code}</span>
+                <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold">{code}</span>
               </div>
               
               {/* Hover Glow */}
@@ -983,16 +1003,16 @@ const App = () => {
     const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
     return (
       <div className="space-y-4 animate-fadeIn">
-        <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 mb-4 whitespace-pre-line">
+        <div className="mb-10 px-2">
+          <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50 mb-4 whitespace-pre-line leading-tight">
             {t.heroTitle}
           </h2>
-          <p className="text-red-100/60 max-w-md text-lg">
+          <p className="text-red-100/60 max-w-md text-sm font-medium leading-relaxed">
             {t.heroSubtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col gap-6 pb-20">
           {CATALOG_DATA.map((cat) => (
             <CategoryCard key={cat.id} category={cat} onClick={handleCategoryClick} lang={lang} />
           ))}
@@ -1006,22 +1026,17 @@ const App = () => {
     return (
       <div className="animate-slideUp">
         <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#2a0a0a]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
-          <button onClick={goBack} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
+          <button onClick={goBack} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors active:scale-95">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <h2 className="text-xl font-bold text-white">{localCat.title}</h2>
+          <h2 className="text-lg font-bold text-white tracking-wide">{localCat.title}</h2>
           <div className="w-10" /> 
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pb-20">
           {activeCategory.products.map((product) => (
             <ProductCard key={product.id} product={product} onClick={handleProductClick} lang={lang} />
           ))}
-        </div>
-        
-        <div className="mt-12 p-8 rounded-3xl bg-red-900/10 border border-red-500/10 text-center">
-          <Leaf className="w-8 h-8 text-red-500 mx-auto mb-3 opacity-50" />
-          <p className="text-red-200/40 text-sm">100% Organic Certified • Sustainably Sourced</p>
         </div>
       </div>
     );
@@ -1036,7 +1051,7 @@ const App = () => {
         {/* Floating Back Button */}
         <button 
           onClick={goBack} 
-          className="fixed top-6 left-6 z-30 w-12 h-12 rounded-full bg-black/20 backdrop-blur-lg border border-white/10 flex items-center justify-center text-white hover:bg-black/40 transition-all"
+          className="fixed top-6 left-6 z-30 w-12 h-12 rounded-full bg-black/20 backdrop-blur-lg border border-white/10 flex items-center justify-center text-white hover:bg-black/40 transition-all active:scale-95"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -1058,24 +1073,25 @@ const App = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">{localProduct.name}</h1>
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-2 leading-none">{localProduct.name}</h1>
           </div>
         </div>
 
         {/* Content */}
         <div className="p-8 max-w-2xl mx-auto">
-          <div className="flex items-start justify-between gap-4 mb-6">
+          <div className="flex flex-col gap-6 mb-8">
             <div className="prose prose-invert flex-1">
-              <h3 className="text-red-400 text-sm font-bold uppercase tracking-widest mb-4">{t.description}</h3>
-              <p className="text-xl text-red-100/80 leading-relaxed font-light">
+              <h3 className="text-red-400 text-xs font-bold uppercase tracking-widest mb-3">{t.description}</h3>
+              <p className="text-lg text-red-100/80 leading-relaxed font-light">
                 {localProduct.description}
               </p>
             </div>
             <button 
               onClick={handleTTS}
-              className={`flex-shrink-0 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center transition-all ${isPlaying ? 'bg-red-600 text-white animate-pulse' : 'bg-white/5 text-red-400 hover:bg-white/10'}`}
+              className={`w-full py-4 rounded-xl border border-white/10 flex items-center justify-center gap-3 transition-all ${isPlaying ? 'bg-red-600 text-white animate-pulse' : 'bg-white/5 text-red-400 hover:bg-white/10'}`}
             >
               {isPlaying ? <StopCircle className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+              <span className="font-bold text-sm">Listen to Description</span>
             </button>
           </div>
 
@@ -1083,7 +1099,7 @@ const App = () => {
           <div className="mb-8">
             <button 
               onClick={handleGenerateBenefits}
-              className={`w-full p-4 rounded-xl border border-white/10 flex items-center justify-center gap-3 transition-all ${aiMode === 'benefits' ? 'bg-red-500/20 border-red-500 text-red-400' : 'bg-white/5 hover:bg-white/10 text-white'}`}
+              className={`w-full p-5 rounded-2xl border border-white/10 flex items-center justify-center gap-3 transition-all active:scale-95 ${aiMode === 'benefits' ? 'bg-red-500/20 border-red-500 text-red-400' : 'bg-gradient-to-r from-red-900/40 to-black hover:bg-white/10 text-white'}`}
             >
               <HeartPulse className="w-6 h-6" />
               <span className="text-sm font-bold tracking-wide">{t.benefits}</span>
@@ -1103,90 +1119,20 @@ const App = () => {
               <Info className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
               <div>
                   <h4 className="text-white font-bold text-sm mb-1">{t.originTitle}</h4>
-                  <p className="text-white/40 text-xs">{t.originText}</p>
+                  <p className="text-white/40 text-xs leading-relaxed">{t.originText}</p>
               </div>
           </div>
         </div>
 
         {/* Bottom Action Bar */}
-        <div className="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#2a0a0a] to-transparent z-30 flex justify-center">
+        <div className="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#2a0a0a] via-[#2a0a0a] to-transparent z-30 flex justify-center">
           <button 
             onClick={handleShare}
-            className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold shadow-[0_0_30px_-10px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 transition-all"
+            className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold shadow-[0_0_30px_-10px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 transition-all w-full md:w-auto justify-center"
           >
             <Share2 className="w-5 h-5" />
             <span>{t.share}</span>
           </button>
-        </div>
-      </div>
-    );
-  };
-
-  const renderStoreLocator = () => {
-    const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
-    return (
-      <div className="animate-slideUp min-h-screen">
-        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#2a0a0a]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
-          <button onClick={() => handleViewChange('home')} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <h2 className="text-xl font-bold text-white">{t.storeLocator}</h2>
-          <div className="w-10" /> 
-        </div>
-
-        <div className="space-y-6">
-          {/* Map Card */}
-          <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/5">
-             <iframe 
-               width="100%" 
-               height="400" 
-               frameBorder="0" 
-               scrolling="no" 
-               marginHeight="0" 
-               marginWidth="0" 
-               src="https://maps.google.com/maps?q=No.548%2FB%20Nawala%20Rd%2C%20Sri%20Jayawardenepura%20Kotte%2010100&t=&z=15&ie=UTF8&iwloc=&output=embed"
-               className="w-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-             ></iframe>
-             <div className="p-6">
-               <div className="flex items-start gap-4 mb-4">
-                 <div className="p-3 rounded-full bg-red-500/20 text-red-400">
-                   <MapPin className="w-6 h-6" />
-                 </div>
-                 <div>
-                   <h3 className="text-lg font-bold text-white mb-1">{t.visitUs}</h3>
-                   <p className="text-white/60 text-sm leading-relaxed">{t.storeAddress}</p>
-                 </div>
-               </div>
-               
-               <a 
-                 href="https://www.google.com/maps/search/?api=1&query=No.548/B+Nawala+Rd,+Sri+Jayawardenepura+Kotte+10100" 
-                 target="_blank" 
-                 rel="noreferrer"
-                 className="w-full py-3 bg-red-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-red-500 transition-colors"
-               >
-                 <MapPin className="w-4 h-4" />
-                 {t.directions}
-               </a>
-             </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
-              <Clock className="w-8 h-8 text-red-400" />
-              <div>
-                <h4 className="text-white font-bold">Opening Hours</h4>
-                <p className="text-white/40 text-sm">Daily: 8:00 AM - 8:00 PM</p>
-              </div>
-            </div>
-            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
-              <Phone className="w-8 h-8 text-red-400" />
-              <div>
-                <h4 className="text-white font-bold">Contact Us</h4>
-                <p className="text-white/40 text-sm">+94 11 234 5678</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );
@@ -1197,7 +1143,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-[#2a0a0a] text-white font-sans selection:bg-red-500/30 transition-colors duration-1000">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
         .animate-slideUp { animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
