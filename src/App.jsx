@@ -14,7 +14,11 @@ import {
   Carrot,
   Droplet,
   Sun,
-  Sparkles
+  Sparkles,
+  Loader2,
+  StopCircle,
+  Volume2,
+  HeartPulse
 } from 'lucide-react';
 
 // --- TRANSLATIONS ---
@@ -499,6 +503,7 @@ const Branding = ({ lang, setLang, onViewChange }) => {
 const CategoryCard = ({ category, onClick, lang }) => {
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   const localCat = getLocalizedContent(category, lang);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <TiltCard 
@@ -508,11 +513,13 @@ const CategoryCard = ({ category, onClick, lang }) => {
       <div className="relative w-full h-80 text-left overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl shadow-black/50">
         
         {/* Background Image - Zoomed */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden bg-white/5">
           <img 
             src={category.catImage || `https://placehold.co/600x400/3f0e0e/red?text=${localCat.title}`} 
             alt={localCat.title} 
-            className="w-full h-full object-cover scale-125 group-hover:scale-110 transition-transform duration-[1.5s] ease-in-out filter brightness-75 group-hover:brightness-90" 
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+            className={`w-full h-full object-cover scale-125 group-hover:scale-110 transition-all duration-[1.5s] ease-in-out filter brightness-75 group-hover:brightness-90 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
           />
           {/* Stronger Gradient for text legibility */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90" />
@@ -545,6 +552,7 @@ const CategoryCard = ({ category, onClick, lang }) => {
 
 const ProductCard = ({ product, onClick, lang }) => {
   const localProd = getLocalizedContent(product, lang);
+  const [imageLoaded, setImageLoaded] = useState(false);
   
   return (
     <TiltCard 
@@ -552,11 +560,13 @@ const ProductCard = ({ product, onClick, lang }) => {
       className="group w-full cursor-pointer"
     >
       <div className="w-full text-left bg-white/5 rounded-2xl border border-white/10 overflow-hidden hover:border-red-500/30 transition-colors duration-300">
-        <div className="aspect-[4/3] overflow-hidden relative">
+        <div className="aspect-[4/3] overflow-hidden relative bg-white/5">
           <img 
             src={product.image} 
             alt={localProd.name} 
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+            className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-700 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
           />
           <div className="absolute top-3 left-3 flex gap-1 flex-wrap max-w-[80%]">
             {product.tags.map(tag => (
@@ -748,6 +758,7 @@ const App = () => {
   const renderProduct = () => {
     const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
     const localProduct = getLocalizedContent(activeProduct, lang);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
       <div className="animate-fadeIn relative min-h-screen pb-32">
@@ -760,11 +771,13 @@ const App = () => {
         </button>
 
         {/* Hero Image */}
-        <div className="relative w-full aspect-[4/5] md:aspect-video rounded-b-[3rem] overflow-hidden shadow-2xl">
+        <div className="relative w-full aspect-[4/5] md:aspect-video rounded-b-[3rem] overflow-hidden shadow-2xl bg-white/5">
           <img 
             src={activeProduct.image} 
             alt={localProduct.name} 
-            className="w-full h-full object-cover"
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+            className={`w-full h-full object-cover transition-all duration-700 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#2a0a0a] via-transparent to-transparent opacity-90" />
           
