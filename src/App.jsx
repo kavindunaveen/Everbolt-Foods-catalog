@@ -7,18 +7,14 @@ import {
   Utensils, 
   Info,
   X,
-  Sparkles,
-  HeartPulse,
-  Volume2,
-  Loader2,
-  StopCircle,
   Globe,
   MapPin,
   Clock,
   Phone,
   Carrot,
   Droplet,
-  Sun
+  Sun,
+  Sparkles
 } from 'lucide-react';
 
 // --- TRANSLATIONS ---
@@ -31,12 +27,9 @@ const TRANSLATIONS = {
     heroSubtitle: "Explore our premium range of organic teas, spices, and dried fruits from the heart of Sri Lanka.",
     explore: "Explore Collection",
     description: "Description",
-    benefits: "View Health Benefits",
     share: "Share Product",
     originTitle: "Pure Ceylon Origin",
     originText: "Sourced directly from our organic gardens in Sri Lanka. Certified free from pesticides and artificial additives.",
-    aiLoading: "Consulting the organic database...",
-    wellness: "Wellness Insights",
     close: "Close",
     selectLang: "Select Language",
     storeLocator: "Store Locator",
@@ -47,39 +40,20 @@ const TRANSLATIONS = {
     // --- CATEGORY TITLES (English) ---
     'herbal-teas_title': 'Herbal Teas',
     'herbal-teas_desc': 'Revitalizing blends for mind and body.',
-    'dried-fruits-snacks_title': 'Dried Fruits & Snacks',
-    'dried-fruits-snacks_desc': 'Nature’s candy, dehydrated to perfection.',
-    'dried-vegetables_title': 'Dried Vegetables',
+    'dried-fruits_title': 'Dried Fruits Range',
+    'dried-fruits_desc': 'Nature’s candy, dehydrated to perfection.',
+    'dried-vegetables_title': 'Dried Vegetables Range',
     'dried-vegetables_desc': 'Preserved nutrition for your daily meals.',
-    'dried-veg-powder_title': 'Dried Vegetable Powder',
-    'dried-veg-powder_desc': 'Nutrient-dense powders for smoothies and cooking.',
-    'spices_title': 'Spices & Herbs',
-    'spices_desc': 'Aromatic spices to elevate your culinary creations.',
-
-    // --- PRODUCT TRANSLATIONS (English) ---
-    // Herbal Teas
-    'ginger-tea_name': 'Ginger & Honey Blend',
-    'ginger-tea_desc': 'A warming natural blend of ginger, lemon, and honey crafted to energize your body and boost immunity.',
-    'strawberry-tea_name': 'Strawberry Essence Tea',
-    'strawberry-tea_desc': 'Delightful pure Ceylon tea fused with ripe strawberry essence.',
-    'slim-herb_name': 'Slim Herb Tea',
-    'slim-herb_desc': 'Formulated for weight management and metabolic support.',
-    'lemon-tea_name': 'Zesty Lemon Tea',
-    'lemon-tea_desc': 'Refreshing citrus notes blended with premium tea leaves.',
-    
-    // Dried Fruits
-    'dehydrated-mango_name': 'Dehydrated Mango Slices',
-    'dehydrated-mango_desc': '100% natural mango slices with no added sugar.',
-    'banana-chips_name': 'Organic Banana Chips',
-    'banana-chips_desc': 'Crispy, organic banana chips fried in virgin coconut oil.',
-    'mixed-fruit_name': 'Tropical Mixed Fruit',
-    'mixed-fruit_desc': 'A vibrant mix of dehydrated pineapple, papaya, and mango.',
-
-    // Spices
-    'cinnamon_name': 'Ceylon Cinnamon Sticks',
-    'cinnamon_desc': 'True Ceylon Cinnamon (Alba grade). Sweet, aromatic, and packed with antioxidants.',
-    'black-pepper_name': 'Organic Black Pepper',
-    'black-pepper_desc': 'Whole black peppercorns sun-dried to retain their bold, spicy heat.'
+    'veg-powder_title': 'Vegetable Powder Range',
+    'veg-powder_desc': 'Nutrient-dense powders for smoothies and cooking.',
+    'spices-range_title': 'Spices Range',
+    'spices-range_desc': 'Aromatic spices in bulk packs.',
+    'spices-glass_title': 'Spices (Glass Bottle)',
+    'spices-glass_desc': 'Premium spices in elegant glass packaging.',
+    'premium-tea_title': 'Premium Tea Collection',
+    'premium-tea_desc': 'Exquisite teas for the connoisseur.',
+    'herbal-tea_title': 'Herbal Tea Range',
+    'herbal-tea_desc': 'Traditional wellness brews.',
   },
   si: {
     label: "සිංහල",
@@ -89,52 +63,33 @@ const TRANSLATIONS = {
     heroSubtitle: "ශ්‍රී ලංකාවේ හදවතින්ම එන අපගේ වාරික කාබනික තේ, කුළුබඩු සහ වියළි පලතුරු පරාසය ගවේෂණය කරන්න.",
     explore: "එකතුව ගවේෂණය කරන්න",
     description: "විස්තරය",
-    benefits: "සෞඛ්‍ය ප්‍රතිලාභ බලන්න",
     share: "බෙදාගන්න",
     originTitle: "ශ්‍රී ලංකාවේ නිෂ්පාදිතයි",
     originText: "අපගේ කාබනික වගාවන්ගෙන් සෘජුවම ලබාගෙන ඇත. කෘමිනාශක සහ කෘතිම එකතු කිරීම් වලින් තොර බවට සහතික කර ඇත.",
-    aiLoading: "කාබනික දත්ත පද්ධතිය පරීක්ෂා කරමින්...",
-    wellness: "සුවතා තොරතුරු",
     close: "වසන්න",
     selectLang: "භාෂාව තෝරන්න",
     storeLocator: "වෙළඳසැල් සොයන්නා",
     visitUs: "අපගේ වෙළඳසැලට පැමිණෙන්න",
     directions: "මාර්ගෝපදේශ ලබා ගන්න",
     storeAddress: "නො.548/B නාවල පාර, ශ්‍රී ජයවර්ධනපුර කෝට්ටේ 10100",
-
+    
     // --- CATEGORY TITLES (Sinhala) ---
     'herbal-teas_title': 'ඖෂධීය තේ',
     'herbal-teas_desc': 'කය සහ මනස පුබුදුවාලන මිශ්‍රණ.',
-    'dried-fruits-snacks_title': 'වියළි පලතුරු සහ කෙටි කෑම',
-    'dried-fruits-snacks_desc': 'ස්වාභාවික රසයෙන් පිරිපුන්, මනාව වියලන ලද පලතුරු.',
+    'dried-fruits_title': 'වියළි පලතුරු',
+    'dried-fruits_desc': 'ස්වාභාවික රසයෙන් පිරිපුන්, මනාව වියලන ලද පලතුරු.',
     'dried-vegetables_title': 'වියළි එළවළු',
     'dried-vegetables_desc': 'දෛනික ආහාර වේල් සඳහා කල් තබා ගත් පෝෂණය.',
-    'dried-veg-powder_title': 'වියළි එළවළු කුඩු',
-    'dried-veg-powder_desc': 'සුප් සහ ආහාර පිසීම සඳහා පෝෂ්‍යදායී කුඩු.',
-    'spices_title': 'කුළුබඩු වර්ග',
-    'spices_desc': 'ඔබේ ආහාර රසවත් කිරීමට සුවඳැති කුළුබඩු.',
-
-    // --- PRODUCT TRANSLATIONS (Sinhala) ---
-    'ginger-tea_name': 'ඉඟුරු සහ පැණි මිශ්‍රණය',
-    'ginger-tea_desc': 'ශරීරය ප්‍රාණවත් කිරීමට සහ ප්‍රතිශක්තිය වැඩි කිරීමට සකස් කරන ලද ඉඟුරු, ලෙමන් සහ පැණි වල ස්වාභාවික මිශ්‍රණයකි.',
-    'strawberry-tea_name': 'ස්ට්‍රෝබෙරි තේ',
-    'strawberry-tea_desc': 'ඉදුණු ස්ට්‍රෝබෙරි සාරය සමඟ මුසු වූ පිරිසිදු ලංකා තේ.',
-    'slim-herb_name': 'සිහින් හැඩය සඳහා තේ',
-    'slim-herb_desc': 'බර පාලනය සහ පරිවෘත්තීය ක්‍රියාවලිය සඳහා සකස් කර ඇත.',
-    'lemon-tea_name': 'දෙහි මිශ්‍ර තේ',
-    'lemon-tea_desc': 'වාරික තේ දළු සමඟ මුසු වූ ප්‍රබෝධමත් දෙහි රසය.',
-    
-    'dehydrated-mango_name': 'වියලන ලද අඹ',
-    'dehydrated-mango_desc': 'සීනි එකතු නොකළ 100% ස්වාභාවික අඹ පෙති.',
-    'banana-chips_name': 'කාබනික කෙසෙල් චිප්ස්',
-    'banana-chips_desc': 'පිරිසිදු පොල්තෙලෙන් බදින ලද, රසවත් කෙසෙල් පෙති.',
-    'mixed-fruit_name': 'පලතුරු මිශ්‍රණය',
-    'mixed-fruit_desc': 'වියලන ලද අන්නාසි, පැපොල් සහ අඹ වල රසවත් මිශ්‍රණයක්.',
-
-    'cinnamon_name': 'කුරුඳු පොලු',
-    'cinnamon_desc': 'නියම ලංකා කුරුඳු. ප්‍රතිඔක්සිකාරක වලින් පොහොසත්.',
-    'black-pepper_name': 'කාබනික ගම්මිරිස්',
-    'black-pepper_desc': 'හිරු එළියෙන් වියලන ලද සම්පූර්ණ ගම්මිරිස් ඇට.'
+    'veg-powder_title': 'වියළි එළවළු කුඩු',
+    'veg-powder_desc': 'සුප් සහ ආහාර පිසීම සඳහා පෝෂ්‍යදායී කුඩු.',
+    'spices-range_title': 'කුළුබඩු වර්ග',
+    'spices-range_desc': 'ඔබේ ආහාර රසවත් කිරීමට සුවඳැති කුළුබඩු.',
+    'spices-glass_title': 'කුළුබඩු (වීදුරු බෝතල්)',
+    'spices-glass_desc': 'උසස් තත්ත්වයේ කුළුබඩු.',
+    'premium-tea_title': 'වාරික තේ එකතුව',
+    'premium-tea_desc': 'විශිෂ්ට තේ රස.',
+    'herbal-tea_title': 'ඔසු තේ වර්ග',
+    'herbal-tea_desc': 'සාම්ප්‍රදායික සුවතා පාන.',
   },
   ta: {
     label: "தமிழ்",
@@ -144,34 +99,25 @@ const TRANSLATIONS = {
     heroSubtitle: "இலங்கையின் இதயத்திலிருந்து எங்கள் பிரீமியம் ஆர்கானிக் தேநீர், மசாலா மற்றும் உலர்ந்த பழங்களை ஆராயுங்கள்.",
     explore: "சேகரிப்பை ஆராயுங்கள்",
     description: "விளக்கம்",
-    benefits: "சுகாதார நன்மைகள்",
     share: "பகிரவும்",
     originTitle: "இலங்கை வம்சாவளி",
     originText: "இலங்கையில் உள்ள எங்கள் இயற்கை தோட்டங்களிலிருந்து நேரடியாகப் பெறப்பட்டது. பூச்சிக்கொல்லிகள் இல்லாதது.",
-    aiLoading: "தரவுத்தளத்தை ஆய்வு செய்கிறது...",
-    wellness: "ஆரோக்கிய குறிப்புகள்",
     close: "மூடு",
     selectLang: "மொழியைத் தேர்ந்தெடுக்கவும்",
     storeLocator: "கடை இருப்பிடம்",
     visitUs: "எங்கள் கடைக்குச் செல்லுங்கள்",
     directions: "திசைகளைப் பெறுங்கள்",
     storeAddress: "எண்.548/B நாவல வீதி, ஸ்ரீ ஜயவர்தனபுர கோட்டை 10100",
-
+    
     // --- CATEGORY TITLES (Tamil) ---
     'herbal-teas_title': 'மூலிகை தேநீர்',
-    'herbal-teas_desc': 'மனதிற்கும் உடலுக்கும் புத்துணர்ச்சி அளிக்கும் கலவைகள்.',
-    'dried-fruits-snacks_title': 'உலர்ந்த பழங்கள் & தின்பண்டங்கள்',
-    'dried-fruits-snacks_desc': 'இயற்கையின் இனிப்பு.',
+    'dried-fruits_title': 'உலர்ந்த பழங்கள்',
     'dried-vegetables_title': 'உலர்ந்த காய்கறிகள்',
-    'dried-vegetables_desc': 'உங்கள் அன்றாட உணவிற்கான ஊட்டச்சத்து.',
-    'dried-veg-powder_title': 'உலர்ந்த காய்கறி தூள்',
-    'dried-veg-powder_desc': 'சமையலுக்கான சத்தான பொடிகள்.',
-    'spices_title': 'மசாலா பொருட்கள்',
-    'spices_desc': 'உங்கள் சமையல் படைப்புகளை உயர்த்துவதற்கான நறுமண மசாலா.',
-
-     // Product Translations
-    'ginger-tea_name': 'இஞ்சி & தேன் கலவை',
-    'ginger-tea_desc': 'உங்கள் உடலை உற்சாகப்படுத்தவும் நோய் எதிர்ப்பு சக்தியை அதிகரிக்கவும் உருவாக்கப்பட்ட இஞ்சி, எலுமிச்சை மற்றும் தேன் ஆகியவற்றின் இயற்கையான கலவை.',
+    'veg-powder_title': 'காய்கறி தூள்',
+    'spices-range_title': 'மசாலா பொருட்கள்',
+    'spices-glass_title': 'மசாலா (கண்ணாடி பாட்டில்)',
+    'premium-tea_title': 'பிரீமியம் தேநீர்',
+    'herbal-tea_title': 'மூலிகை தேநீர்',
   },
   es: {
     label: "Español",
@@ -181,12 +127,9 @@ const TRANSLATIONS = {
     heroSubtitle: "Explore nuestra gama premium de tés orgánicos, especias y frutas secas desde el corazón de Sri Lanka.",
     explore: "Explorar Colección",
     description: "Descripción",
-    benefits: "Ver Beneficios para la Salud",
     share: "Compartir Producto",
     originTitle: "Origen Puro de Ceilán",
     originText: "Obtenido directamente de nuestros jardines orgánicos en Sri Lanka. Certificado libre de pesticidas y aditivos artificiales.",
-    aiLoading: "Consultando la base de datos orgánica...",
-    wellness: "Perspectivas de Bienestar",
     close: "Cerrar",
     selectLang: "Seleccionar Idioma",
     storeLocator: "Localizador de Tiendas",
@@ -202,12 +145,9 @@ const TRANSLATIONS = {
     heroSubtitle: "Découvrez notre gamme premium de thés biologiques, d'épices et de fruits secs du cœur du Sri Lanka.",
     explore: "Explorer la Collection",
     description: "Description",
-    benefits: "Voir les Bienfaits Santé",
     share: "Partager le Produit",
     originTitle: "Origine Pure Ceylan",
     originText: "Provenant directement de nos jardins biologiques au Sri Lanka. Certifié sans pesticides ni additifs artificiels.",
-    aiLoading: "Consultation de la base de données biologique...",
-    wellness: "Bien-être et Santé",
     close: "Fermer",
     selectLang: "Choisir la Langue",
     storeLocator: "Localisateur de Magasin",
@@ -223,12 +163,9 @@ const TRANSLATIONS = {
     heroSubtitle: "Entdecken Sie unser Premium-Sortiment an Bio-Tees, Gewürzen und Trockenfrüchten aus dem Herzen Sri Lankas.",
     explore: "Kollektion Entdecken",
     description: "Beschreibung",
-    benefits: "Gesundheitsvorteile Anzeigen",
     share: "Produkt Teilen",
     originTitle: "Reiner Ceylon-Ursprung",
     originText: "Direkt aus unseren Bio-Gärten in Sri Lanka bezogen. Zertifiziert frei von Pestiziden und künstlichen Zusatzstoffen.",
-    aiLoading: "Durchsuche die Bio-Datenbank...",
-    wellness: "Wellness-Einblicke",
     close: "Schließen",
     selectLang: "Sprache Wählen",
     storeLocator: "Filialfinder",
@@ -244,12 +181,9 @@ const TRANSLATIONS = {
     heroSubtitle: "探索来自斯里兰卡中心的优质有机茶、香料和干果系列。",
     explore: "探索系列",
     description: "描述",
-    benefits: "查看健康益处",
     share: "分享产品",
     originTitle: "纯正锡兰原产",
     originText: "直接采购自我们在斯里兰卡的有机花园。认证无农药和人工添加剂。",
-    aiLoading: "正在查询有机数据库...",
-    wellness: "健康见解",
     close: "关闭",
     selectLang: "选择语言",
     storeLocator: "商店定位器",
@@ -265,12 +199,9 @@ const TRANSLATIONS = {
     heroSubtitle: "استكشف مجموعتنا المتميزة من الشاي العضوي والتوابل والفواكه المجففة من قلب سريلانكا.",
     explore: "استكشاف المجموعة",
     description: "الوصف",
-    benefits: "عرض الفوائد الصحية",
     share: "مشاركة المنتج",
     originTitle: "أصل سيلاني نقي",
     originText: "مصدرها مباشرة من حدائقنا العضوية في سريلانكا. معتمدة وخالية من المبيدات والإضافات الاصطناعية.",
-    aiLoading: "جاري استشارة قاعدة البيانات العضوية...",
-    wellness: "رؤى صحية",
     close: "إغلاق",
     selectLang: "اختر اللغة",
     storeLocator: "محدد موقع المتجر",
@@ -286,12 +217,9 @@ const TRANSLATIONS = {
     heroSubtitle: "スリランカの中心部からお届けする、プレミアムなオーガニックティー、スパイス、ドライフルーツをご覧ください。",
     explore: "コレクションを見る",
     description: "説明",
-    benefits: "健康効果を見る",
     share: "製品をシェア",
     originTitle: "純粋なセイロン産",
     originText: "スリランカのオーガニック農園から直接調達。農薬や人工添加物不使用の認定済み。",
-    aiLoading: "オーガニックデータベースを検索中...",
-    wellness: "ウェルネス情報",
     close: "閉じる",
     selectLang: "言語を選択",
     storeLocator: "店舗検索",
@@ -325,11 +253,11 @@ const CATALOG_DATA = [
     // Category Image Placeholder
     catImage: '/categories/dryveg.png',
     products: [
-      { id: 'jackfruit', name: 'Dried Jackfruit', description: 'Available in 50g, 100g. Pure dehydrated jackfruit.', image: '/products/jackfruit.png', tags: ['50g', '100g'] },
-      { id: 'breadfruit', name: 'Dried Breadfruit', description: 'Available in 50g, 100g. Authentic dehydrated breadfruit.', image: '/products/breadfruit.png', tags: ['50g', '100g'] },
-      { id: 'bittergourd', name: 'Dried Bitter Gourd', description: 'Available in 50g, 100g. Sun-dried organic bitter gourd slices.', image: '/products/bittergourd.png', tags: ['50g', '100g'] },
-      { id: 'curry-leaves-dry', name: 'Dried Curry Leaves', description: 'Available in 50g, 100g. Aromatic dried leaves.', image: '/products/curry-leaves-dry.png', tags: ['50g', '100g'] },
-      { id: 'leeks', name: 'Dried Leeks', description: 'Available in 50g, 100g. Dehydrated leeks for soups and garnishing.', image: '/products/leeks.png', tags: ['50g', '100g'] }
+      { id: 'jackfruit', name: 'Dried Jackfruit', description: 'Experience the rich taste of Sri Lankan jackfruit with our Dried Jackfruit, gently dried to preserve its natural flavor and texture without added colors or preservatives.', image: '/products/jackfruit.png', tags: ['50g', '100g'] },
+      { id: 'breadfruit', name: 'Dried Breadfruit', description: 'Experience the wholesome flavor of Sri Lankan heritage with our Dried Breadfruit; gently dried to preserve its natural taste and texture without added colors or preservatives.', image: '/products/breadfruit.png', tags: ['50g', '100g'] },
+      { id: 'bittergourd', name: 'Dried Bitter Gourd', description: 'Experience the authentic taste of Sri Lankan tradition with our Dried Bitter Gourd, gently dried to retain its natural bitterness, color, and nutrients without added colors or preservatives.', image: '/products/bittergourd.png', tags: ['50g', '100g'] },
+      { id: 'curry-leaves-dry', name: 'Dried Curry Leaves', description: 'Experience the aroma of Sri Lankan kitchens with our Dried Curry Leaves, gently dried to retain their natural color and flavor without added colors or preservatives.', image: '/products/curry-leaves-dry.png', tags: ['50g', '100g'] },
+      { id: 'leeks', name: 'Dried Leeks', description: 'Experience the mild sweetness of natural vegetables with our Dried Leeks, gently dried to retain their natural flavor, aroma, and color without added colors or preservatives.', image: '/products/leeks.png', tags: ['50g', '100g'] }
     ]
   },
   {
@@ -340,10 +268,10 @@ const CATALOG_DATA = [
     theme: { blob1: 'bg-orange-500/20', blob2: 'bg-yellow-500/20' },
     catImage: '/categories/dryfood.png',
     products: [
-      { id: 'pineapple', name: 'Dried Pineapple', description: 'Available in 50g, 100g. Tropical sweetness in every bite.', image: '/products/pineapple.png', tags: ['50g', '100g'] },
-      { id: 'papaya', name: 'Dried Papaya', description: 'Available in 50g, 100g. Naturally sweet dried papaya.', image: '/products/papaya.png', tags: ['50g', '100g'] },
-      { id: 'banana', name: 'Dried Banana', description: 'Available in 50g, 100g. Chewy and rich in energy.', image: '/products/banana.png', tags: ['50g', '100g'] },
-      { id: 'mango', name: 'Dried Mango', description: 'Available in 50g, 100g. The king of fruits, dehydrated.', image: '/products/mango.png', tags: ['50g', '100g'] }
+      { id: 'pineapple', name: 'Dried Pineapple', description: 'Experience the refreshing taste of our Dried Pineapple, preserving the natural flavor and aroma without added sugar, colors, or preservatives.', image: '/products/pineapple.png', tags: ['50g', '100g'] },
+      { id: 'papaya', name: 'Dried Papaya', description: 'Experience the wholesome goodness of our Dried Papaya, gently dried to maintain its soft texture and pleasant flavor with no added sugar, colors, or preservatives.', image: '/products/papaya.png', tags: ['50g', '100g'] },
+      { id: 'banana', name: 'Dried Banana', description: 'Experience the natural goodness of sun-ripened Sri Lankan bananas, gently dried to lock in nutrients and flavor with no added sugar, colors, or preservatives.', image: '/products/banana.png', tags: ['50g', '100g'] },
+      { id: 'mango', name: 'Dried Mango', description: 'Experience the vibrant flavor of peak-harvested Sri Lankan mangoes, dried to preserve their natural sweetness with absolutely no added sugar or colors.', image: '/products/mango.png', tags: ['50g', '100g'] }
     ]
   },
   {
@@ -354,12 +282,12 @@ const CATALOG_DATA = [
     theme: { blob1: 'bg-pink-600/20', blob2: 'bg-rose-500/20' },
     catImage: '/categories/currypowder.png',
     products: [
-      { id: 'beetroot-p', name: 'Beetroot Powder', description: 'Available in 100g, 200g. Natural color and nutrition.', image: '/products/beetroot-p.png', tags: ['100g', '200g'] },
-      { id: 'carrot-p', name: 'Carrot Powder', description: 'Available in 100g, 200g. Rich in Vitamin A.', image: '/products/carrot-p.png', tags: ['100g', '200g'] },
-      { id: 'moringa-p', name: 'Moringa Powder', description: 'Available in 100g, 200g. The ultimate superfood powder.', image: '/products/moringa-p.png', tags: ['100g', '200g'] },
-      { id: 'curry-p', name: 'Curry Leaves Powder', description: 'Available in 100g, 200g. Concentrated aroma and flavor.', image: '/products/curry-p.png', tags: ['100g', '200g'] },
-      { id: 'tomato-p', name: 'Tomato Powder', description: 'Available in 100g, 200g. Tangy and versatile.', image: '/products/tomato-p.png', tags: ['100g', '200g'] },
-      { id: 'pumpkin-p', name: 'Pumpkin Powder', description: 'Available in 100g, 200g. Sweet and nutritious.', image: '/products/pumpkin-p.png', tags: ['100g', '200g'] }
+      { id: 'beetroot-p', name: 'Beetroot Powder', description: 'Experience the natural color and goodness of Sri Lanka with our Beetroot Powder, gently dried and ground to preserve nutrients and flavor with no added colors or preservatives.', image: '/products/beetroot-p.png', tags: ['100g', '200g'] },
+      { id: 'carrot-p', name: 'Carrot Powder', description: 'Experience the sweetness of natural freshness with our Carrot Powder, carefully milled from premium carrots to retain their mild sweetness and natural color without added colors or preservatives.', image: '/products/carrot-p.png', tags: ['100g', '200g'] },
+      { id: 'moringa-p', name: 'Moringa Powder', description: 'Experience the green goodness of Sri Lanka with our Moringa Powder, gently dried to preserve natural nutrients and color without added colors or preservatives.', image: '/products/moringa-p.png', tags: ['100g', '200g'] },
+      { id: 'curry-p', name: 'Curry Leaves Powder', description: 'Experience the aroma of Sri Lankan tradition with our Curry Leaf Powder, gently dried to retain its natural flavor, aroma, and color without added colors or preservatives.', image: '/products/curry-p.png', tags: ['100g', '200g'] },
+      { id: 'tomato-p', name: 'Tomato Powder', description: 'Experience the rich taste of ripe tomatoes with our Tomato Powder, gently dried to preserve natural color and tangy flavor without added colors or preservatives.', image: '/products/tomato-p.png', tags: ['100g', '200g'] },
+      { id: 'pumpkin-p', name: 'Pumpkin Powder', description: 'Experience the mild sweetness of natural vegetables with our Pumpkin Powder, carefully dried to retain its natural flavor and color with no added colors or preservatives.', image: '/products/pumpkin-p.png', tags: ['100g', '200g'] }
     ]
   },
   {
@@ -370,18 +298,18 @@ const CATALOG_DATA = [
     theme: { blob1: 'bg-red-700/20', blob2: 'bg-orange-800/20' },
     catImage: '/categories/packets.jpg',
     products: [
-      { id: 'fenugreek', name: 'Fenugreek', description: '100g, 200g. Elevate your dishes with the natural goodness of our high-quality Fenugreek, offering the authentic, preservative-free flavor of premium Sri Lankan quality.', image: '/products/fenugreek.jpg', tags: ['100g', '200g'] },
-      { id: 'cumin', name: 'Cumin Seeds', description: '100g, 200g. Experience the natural purity of our Cumin Seeds, delivering the genuine, preservative-free taste of authentic Sri Lankan cuisine.', image: '/products/cumin.jpg', tags: ['100g', '200g'] },
-      { id: 'mustard', name: 'Mustard Seeds', description: '100g, 200g. Experience the sharp, natural pungency of our preservative-free Mustard Seeds, essential for the authentic taste of traditional Sri Lankan tempering.', image: '/products/mustard.jpg', tags: ['100g', '200g'] },
-      { id: 'turmeric', name: 'Turmeric Powder', description: '100g, 200g, 500g. Experience the golden standard of purity with our natural Turmeric Powder, essential for healthy and authentic Sri Lankan cooking.', image: '/products/turmeric.jpg', tags: ['Bulk'] },
-      { id: 'chili-p', name: 'Chili Powder', description: '100g, 200g, 500g, 1kg. Experience the standard of pure Sri Lankan flavor with our natural Chili Powder, delivering consistent heat and vibrant color without preservatives.', image: '/products/chili-p.jpg', tags: ['Bulk'] },
-      { id: 'chili-f', name: 'Chili Flakes', description: '100g, 200g, 500g, 1kg. Experience the bold crunch of our natural Chili Flakes, delivering the authentic heat and vibrant color of premium Sri Lankan quality.', image: '/products/chili-f.jpg', tags: ['Bulk'] },
-      { id: 'pepper-p', name: 'Black Pepper Powder', description: '100g, 200g, 500g, 1kg. Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-p.jpg', tags: ['Bulk'] },
-      { id: 'curry-pwdr', name: 'Curry Powder', description: '100g, 200g, 500g, 1kg. Experience the taste of tradition with our Curry Powder, expertly blended to deliver the authentic flavor, color, and aroma of Sri Lankan cuisine without added preservatives.', image: '/products/curry-pwdr.jpg', tags: ['Bulk'] },
-      { id: 'roasted-curry', name: 'Roasted Curry Powder', description: '100g, 200g, 500g, 1kg. Experience the taste of tradition with our Curry Powder, expertly blended to deliver the authentic flavor, color, and aroma of Sri Lankan cuisine without added preservatives.', image: '/products/roasted-curry.jpg', tags: ['Bulk'] },
-      { id: 'cinnamon-p', name: 'Cinnamon Powder', description: '100g, 200g, 500g, 1kg. xperience the warmth of Sri Lankan heritage with our finely ground Cinnamon Powder, offering a naturally sweet aroma and smooth flavor with no added colors or preservatives.', image: '/products/cinnamon-p.jpg', tags: ['Bulk'] },
-      { id: 'pepper-corns', name: 'Black Pepper Corns', description: '50g, 100g, 200g, 500g, 1kg. Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-corns.jpg', tags: ['Bulk'] },
-      { id: 'pepper-cracked', name: 'Black Pepper Cracked', description: '100g, 200g, 500g, 1kg.Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-cracked.jpg', tags: ['Bulk'] }
+      { id: 'fenugreek', name: 'Fenugreek', description: 'Elevate your dishes with the natural goodness of our high-quality Fenugreek, offering the authentic, preservative-free flavor of premium Sri Lankan quality.', image: '/products/fenugreek.jpg', tags: ['100g', '200g'] },
+      { id: 'cumin', name: 'Cumin Seeds', description: 'Experience the natural purity of our Cumin Seeds, delivering the genuine, preservative-free taste of authentic Sri Lankan cuisine.', image: '/products/cumin.jpg', tags: ['100g', '200g'] },
+      { id: 'mustard', name: 'Mustard Seeds', description: 'Experience the sharp, natural pungency of our preservative-free Mustard Seeds, essential for the authentic taste of traditional Sri Lankan tempering.', image: '/products/mustard.jpg', tags: ['100g', '200g'] },
+      { id: 'turmeric', name: 'Turmeric Powder', description: 'Experience the golden standard of purity with our natural Turmeric Powder, essential for healthy and authentic Sri Lankan cooking.', image: '/products/turmeric.jpg', tags: ['Bulk'] },
+      { id: 'chili-p', name: 'Chili Powder', description: 'Experience the standard of pure Sri Lankan flavor with our natural Chili Powder, delivering consistent heat and vibrant color without preservatives.', image: '/products/chili-p.jpg', tags: ['Bulk'] },
+      { id: 'chili-f', name: 'Chili Flakes', description: 'Experience the bold crunch of our natural Chili Flakes, delivering the authentic heat and vibrant color of premium Sri Lankan quality.', image: '/products/chili-f.jpg', tags: ['Bulk'] },
+      { id: 'pepper-p', name: 'Black Pepper Powder', description: 'Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-p.jpg', tags: ['Bulk'] },
+      { id: 'curry-pwdr', name: 'Curry Powder', description: 'Experience the taste of tradition with our Curry Powder, expertly blended to deliver the authentic flavor, color, and aroma of Sri Lankan cuisine without added preservatives.', image: '/products/curry-pwdr.jpg', tags: ['Bulk'] },
+      { id: 'roasted-curry', name: 'Roasted Curry Powder', description: 'Experience the taste of tradition with our Curry Powder, expertly blended to deliver the authentic flavor, color, and aroma of Sri Lankan cuisine without added preservatives.', image: '/products/roasted-curry.jpg', tags: ['Bulk'] },
+      { id: 'cinnamon-p', name: 'Cinnamon Powder', description: 'Experience the warmth of Sri Lankan heritage with our finely ground Cinnamon Powder, offering a naturally sweet aroma and smooth flavor with no added colors or preservatives.', image: '/products/cinnamon-p.jpg', tags: ['Bulk'] },
+      { id: 'pepper-corns', name: 'Black Pepper Corns', description: 'Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-corns.jpg', tags: ['Bulk'] },
+      { id: 'pepper-cracked', name: 'Black Pepper Cracked', description: 'Experience the strength of real spice with our premium Black Pepper, delivering bold heat and rich Sri Lankan flavor with no added colors or preservatives.', image: '/products/pepper-cracked.jpg', tags: ['Bulk'] }
     ]
   },
   {
@@ -392,31 +320,31 @@ const CATALOG_DATA = [
     theme: { blob1: 'bg-amber-600/20', blob2: 'bg-yellow-600/20' },
     catImage: '/categories/glassbottles.jpg',
     products: [
-      { id: 'cardamom-pods', name: 'Cardamom Pods', description: '30g Bottle.', image: '/products/cardamom-pods.jpg', tags: ['30g'] },
-      { id: 'cardamom-seeds', name: 'Cardamom Seeds', description: '45g Bottle.', image: '/products/cardamom-seeds.jpg', tags: ['45g'] },
-      { id: 'cinnamon-flakes', name: 'Cinnamon Flakes', description: '30g Bottle.', image: '/products/cinnamon-flakes.jpg', tags: ['30g'] },
-      { id: 'citrus-p', name: 'Citrus Powder', description: '35g Bottle.', image: '/products/citrus-p.jpg', tags: ['35g'] },
-      { id: 'clove-p', name: 'Clove Powder', description: '35g Bottle.', image: '/products/clove-p.jpg', tags: ['35g'] },
-      { id: 'coriander-p', name: 'Coriander Powder', description: '35g Bottle.', image: '/products/coriander-p.jpg', tags: ['35g'] },
-      { id: 'cumin-s', name: 'Cumin Seeds', description: '50g Bottle.', image: '/products/cumin-s.jpg', tags: ['50g'] },
+      { id: 'cardamom-pods', name: 'Cardamom Pods', description: 'Experience the rich aroma of Sri Lanka with our premium handpicked Cardamom Pods, delivering a naturally sweet, warm flavor with no added colors or preservatives.', image: '/products/cardamom-pods.jpg', tags: ['30g'] },
+      { id: 'cardamom-seeds', name: 'Cardamom Seeds', description: 'Experience concentrated flavor and aroma with our Cardamom Seeds, carefully separated from premium pods to deliver a strong fragrance with no added colors or preservatives.', image: '/products/cardamom-seeds.jpg', tags: ['45g'] },
+      { id: 'cinnamon-flakes', name: 'Cinnamon Flakes', description: 'Experience the heritage of Sri Lankan cinnamon with our high-quality Cinnamon Flakes, carefully processed to retain natural sweetness and aroma without added colors or preservatives.', image: '/products/cinnamon-flakes.jpg', tags: ['30g'] },
+      { id: 'citrus-p', name: 'Citrus Powder', description: 'Premium citrus powder.', image: '/products/citrus-p.jpg', tags: ['35g'] },
+      { id: 'clove-p', name: 'Clove Powder', description: 'Experience the warmth of natural spice with our finely ground Clove Powder, delivering a strong aroma and rich, spicy flavor with no added colors or preservatives.', image: '/products/clove-p.jpg', tags: ['35g'] },
+      { id: 'coriander-p', name: 'Coriander Powder', description: 'Experience the freshness of tradition with our Coriander Powder, milled from selected seeds to deliver a balanced flavor and mild citrus aroma without added colors or preservatives.', image: '/products/coriander-p.jpg', tags: ['35g'] },
+      { id: 'cumin-s', name: 'Cumin Seeds', description: 'Experience the bold aroma of purity with our Cumin Seeds, sourced from selected harvests to deliver an earthy flavor and natural aroma with no added colors or preservatives.', image: '/products/cumin-s.jpg', tags: ['50g'] },
       { id: 'curry-p-glass', name: 'Curry Powder', description: '40g Bottle.', image: '/products/curry-p-glass.jpg', tags: ['40g'] },
-      { id: 'fennel-p', name: 'Fennel Powder', description: '40g Bottle.', image: '/products/fennel-p.jpg', tags: ['40g'] },
-      { id: 'fennel-s', name: 'Fennel Seeds', description: '45g Bottle.', image: '/products/fennel-s.jpg', tags: ['45g'] },
-      { id: 'fenugreek-s', name: 'Fenugreek Seeds', description: '80g Bottle.', image: '/products/fenugreek-s.jpg', tags: ['80g'] },
-      { id: 'garlic-p', name: 'Garlic Powder', description: '50g Bottle.', image: '/products/garlic-p.jpg', tags: ['50g'] },
-      { id: 'garlic-s', name: 'Garlic Slices', description: '30g Bottle.', image: '/products/garlic-s.jpg', tags: ['30g'] },
-      { id: 'gotukola', name: 'Gotukola Flakes', description: '10g Bottle.', image: '/products/gotukola.jpg', tags: ['10g'] },
-      { id: 'mace-ground', name: 'Ground Mace', description: '35g Bottle.', image: '/products/mace-ground.jpg', tags: ['35g'] },
-      { id: 'lemongrass', name: 'Lemon Grass Flakes', description: '35g Bottle.', image: '/products/lemongrass.jpg', tags: ['35g'] },
-      { id: 'mint', name: 'Mint Flakes', description: '5g Bottle.', image: '/products/mint.jpg', tags: ['5g'] },
-      { id: 'moringa-leaf', name: 'Moringa Leaf Powder', description: '24g Bottle.', image: '/products/moringa-leaf.jpg', tags: ['24g'] },
-      { id: 'mustard-s', name: 'Mustard Seeds', description: '70g Bottle.', image: '/products/mustard-s.jpg', tags: ['70g'] },
-      { id: 'nutmeg', name: 'Nutmeg Grated', description: '30g Bottle.', image: '/products/nutmeg.jpg', tags: ['30g'] },
+      { id: 'fennel-p', name: 'Fennel Powder', description: 'Experience gentle sweetness and aroma with our finely ground Fennel Powder, offering a refreshing scent and natural flavor with no added colors or preservatives.', image: '/products/fennel-p.jpg', tags: ['40g'] },
+      { id: 'fennel-s', name: 'Fennel Seeds', description: 'Experience the freshness of natural spice with our Fennel Seeds, carefully selected for their clean aroma and mild sweetness without added colors or preservatives.', image: '/products/fennel-s.jpg', tags: ['45g'] },
+      { id: 'fenugreek-s', name: 'Fenugreek Seeds', description: 'Experience the depth of authentic flavor with our Fenugreek Seeds, selected for their rich aroma and natural bitterness with no added colors or preservatives.', image: '/products/fenugreek-s.jpg', tags: ['80g'] },
+      { id: 'garlic-p', name: 'Garlic Powder', description: 'Experience the convenience of pure flavor with our Garlic Powder, made from fresh cloves gently dried to retain natural aroma without added colors or preservatives.', image: '/products/garlic-p.jpg', tags: ['50g'] },
+      { id: 'garlic-s', name: 'Garlic Slices', description: 'Experience the crunch of natural garlic with our Garlic Slices, thinly sliced and dried to preserve flavor and aroma without added colors or preservatives.', image: '/products/garlic-s.jpg', tags: ['30g'] },
+      { id: 'gotukola', name: 'Gotukola Flakes', description: 'Experience the goodness of Sri Lankan tradition with our Gotukola Flakes, gently dried to retain nutrients and natural color with no added colors or preservatives.', image: '/products/gotukola.jpg', tags: ['10g'] },
+      { id: 'mace-ground', name: 'Ground Mace', description: 'Experience the delicate warmth of spice with our Ground Mace, finely milled to deliver a subtle aroma and smooth flavor with no added colors or preservatives.', image: '/products/mace-ground.jpg', tags: ['35g'] },
+      { id: 'lemongrass', name: 'Lemon Grass Flakes', description: 'Experience the refreshing aroma of Sri Lanka with our Lemongrass Flakes, gently dried to retain their citrusy scent and natural color without added colors or preservatives.', image: '/products/lemongrass.jpg', tags: ['35g'] },
+      { id: 'mint', name: 'Mint Flakes', description: 'Experience the freshness of natural herbs with our Mint Flakes, gently dried to retain their refreshing aroma and color without added colors or preservatives.', image: '/products/mint.jpg', tags: ['5g'] },
+      { id: 'moringa-leaf', name: 'Moringa Leaf Powder', description: 'Experience the natural wellness of Sri Lanka with our Moringa Leaf Powder, gently dried and ground to preserve nutrients and pure green goodness without added colors.', image: '/products/moringa-leaf.jpg', tags: ['24g'] },
+      { id: 'mustard-s', name: 'Mustard Seeds', description: 'Experience the sharp bite of tradition with our Mustard Seeds, carefully selected for natural pungency and clean flavor with no added colors or preservatives.', image: '/products/mustard-s.jpg', tags: ['70g'] },
+      { id: 'nutmeg', name: 'Nutmeg Grated', description: 'Experience rich, warm aroma with our Grated Nutmeg, finely prepared from premium whole nutmeg to deliver natural flavor with no added colors or preservatives.', image: '/products/nutmeg.jpg', tags: ['30g'] },
       { id: 'roasted-curry-g', name: 'Roasted Curry Powder', description: '50g Bottle.', image: '/products/roasted-curry-g.jpg', tags: ['50g'] },
-      { id: 'sesame', name: 'Sesame Seeds', description: '60g Bottle.', image: '/products/sesame.jpg', tags: ['60g'] },
+      { id: 'sesame', name: 'Sesame Seeds', description: 'Experience the richness of natural goodness with our Sesame Seeds, carefully selected to deliver freshness and a nutty flavor without added colors or preservatives.', image: '/products/sesame.jpg', tags: ['60g'] },
       { id: 'turmeric-g', name: 'Turmeric Powder', description: '50g Bottle.', image: '/products/turmeric-g.jpg', tags: ['50g'] },
-      { id: 'uva-bw', name: 'Uva Black & White Peppercorns', description: '50g Bottle.', image: '/products/uva-bw.jpg', tags: ['50g'] },
-      { id: 'uva-w', name: 'Uva White Peppercorns', description: '60g Bottle.', image: '/products/uva-w.jpg', tags: ['60g'] },
+      { id: 'uva-bw', name: 'Uva Black & White Peppercorns', description: 'Experience the power of premium spice with our Black and White Peppercorns, delivering strong aroma and bold heat with no added colors or preservatives.', image: '/products/uva-bw.jpg', tags: ['50g'] },
+      { id: 'uva-w', name: 'Uva White Peppercorns', description: 'Experience smooth heat and aroma with our White Peppercorns, processed to deliver a clean, refined flavor perfect for light-colored dishes with no added preservatives.', image: '/products/uva-w.jpg', tags: ['60g'] },
       { id: 'mace-whole', name: 'Whole Mace', description: '10g Bottle.', image: '/products/mace-whole.jpg', tags: ['10g'] },
       { id: 'chili-g', name: 'Chili Powder', description: '40g Bottle.', image: '/products/chili-g.jpg', tags: ['40g'] }
     ]
@@ -456,125 +384,7 @@ const CATALOG_DATA = [
   }
 ];
 
-// --- GEMINI API UTILITIES ---
-
-// 🔴 IMPORTANT: PASTE YOUR GOOGLE GEMINI API KEY BELOW 🔴
-// Get one here: https://aistudio.google.com/app/apikey
-const apiKey = "PASTE_YOUR_API_KEY_HERE"; 
-
-async function callGeminiText(prompt) {
-  if (!apiKey || apiKey === "PASTE_YOUR_API_KEY_HERE") {
-    return "⚠️ API Key Missing. Please add your Gemini API Key in the code to enable AI features.";
-  }
-
-  try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-        })
-      }
-    );
-    if (!response.ok) throw new Error('Gemini API Error');
-    const data = await response.json();
-    return data.candidates?.[0]?.content?.parts?.[0]?.text || "I couldn't generate that right now.";
-  } catch (error) {
-    console.error(error);
-    return "Sorry, I'm having trouble connecting to the AI wellness expert right now.";
-  }
-}
-
-async function callGeminiTTS(text) {
-  try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: text }] }],
-          generationConfig: {
-            responseModalities: ["AUDIO"],
-            speechConfig: {
-              voiceConfig: { prebuiltVoiceConfig: { voiceName: "Kore" } }
-            }
-          }
-        })
-      }
-    );
-
-    if (!response.ok) throw new Error('TTS API Error');
-    const data = await response.json();
-    const inlineData = data.candidates?.[0]?.content?.parts?.[0]?.inlineData;
-    
-    if (inlineData) {
-      // Decode Base64 to PCM
-      const binaryString = atob(inlineData.data);
-      const len = binaryString.length;
-      const bytes = new Uint8Array(len);
-      for (let i = 0; i < len; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
-      }
-      const pcmData = new Int16Array(bytes.buffer);
-      
-      // Convert PCM to WAV (Standard 24kHz for Gemini usually)
-      const wavBytes = pcmToWav(pcmData, 24000);
-      const blob = new Blob([wavBytes], { type: 'audio/wav' });
-      return URL.createObjectURL(blob);
-    }
-    return null;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-}
-
-// Helper to convert raw PCM16 to WAV format for browser playback
-function pcmToWav(pcmData, sampleRate) {
-  const numChannels = 1;
-  const byteRate = sampleRate * numChannels * 2;
-  const blockAlign = numChannels * 2;
-  const dataSize = pcmData.length * 2;
-  const buffer = new ArrayBuffer(44 + dataSize);
-  const view = new DataView(buffer);
-
-  // RIFF chunk descriptor
-  writeString(view, 0, 'RIFF');
-  view.setUint32(4, 36 + dataSize, true);
-  writeString(view, 8, 'WAVE');
-  // fmt sub-chunk
-  writeString(view, 12, 'fmt ');
-  view.setUint32(16, 16, true);
-  view.setUint16(20, 1, true); // PCM format
-  view.setUint16(22, numChannels, true);
-  view.setUint32(24, sampleRate, true);
-  view.setUint32(28, byteRate, true);
-  view.setUint16(32, blockAlign, true);
-  view.setUint16(34, 16, true); // Bits per sample
-  // data sub-chunk
-  writeString(view, 36, 'data');
-  view.setUint32(40, dataSize, true);
-
-  // Write PCM data
-  const offset = 44;
-  for (let i = 0; i < pcmData.length; i++) {
-    view.setInt16(offset + i * 2, pcmData[i], true);
-  }
-  return buffer;
-}
-
-function writeString(view, offset, string) {
-  for (let i = 0; i < string.length; i++) {
-    view.setUint8(offset + i, string.charCodeAt(i));
-  }
-}
-
 // --- NEW COMPONENT: TILT CARD ---
-// Handles 3D tilt effects on mouse move and simple touch feedback
-
 const TiltCard = ({ children, onClick, className = "" }) => {
   const cardRef = useRef(null);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
@@ -765,41 +575,6 @@ const ProductCard = ({ product, onClick, lang }) => {
   );
 };
 
-const AIOutput = ({ type, content, loading, onClose, lang }) => {
-  if (!type) return null;
-  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
-
-  return (
-    <div className="mt-6 animate-fadeIn">
-      <div className="rounded-2xl bg-gradient-to-br from-red-900/40 to-black border border-red-500/30 overflow-hidden shadow-2xl">
-        <div className="p-4 bg-white/5 border-b border-white/5 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-red-400 font-bold">
-            <Sparkles className="w-4 h-4" />
-            <span>{t.wellness}</span>
-          </div>
-          <button onClick={onClose} className="p-1 hover:bg-white/10 rounded-full transition-colors">
-            <X className="w-5 h-5 text-white/50" />
-          </button>
-        </div>
-        <div className="p-6">
-          {loading ? (
-            <div className="flex flex-col items-center justify-center py-8 gap-3">
-              <Loader2 className="w-8 h-8 text-red-400 animate-spin" />
-              <p className="text-sm text-red-200/60 animate-pulse">{t.aiLoading}</p>
-            </div>
-          ) : (
-            <div className="prose prose-invert prose-sm max-w-none">
-              <div className="whitespace-pre-line text-red-100/90 leading-relaxed font-light">
-                {content}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const ShareToast = ({ show, lang }) => {
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   return (
@@ -824,35 +599,9 @@ const App = () => {
   // Theme State - Default to Red/Rose theme
   const [theme, setTheme] = useState({ blob1: 'bg-red-500/10', blob2: 'bg-rose-500/5' });
 
-  // AI State
-  const [aiMode, setAiMode] = useState(null); 
-  const [aiLoading, setAiLoading] = useState(false);
-  const [aiContent, setAiContent] = useState('');
-  
-  // Audio State
-  const [audioUrl, setAudioUrl] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null);
-
   useEffect(() => {
     setIsLoaded(true);
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-    };
   }, []);
-
-  useEffect(() => {
-    setAiMode(null);
-    setAiContent('');
-    setAudioUrl(null);
-    setIsPlaying(false);
-    if (audioRef.current) {
-      audioRef.current.pause();
-    }
-  }, [activeProduct]);
 
   const handleLanguageSelect = (selectedCode) => {
     setLang(selectedCode);
@@ -912,52 +661,6 @@ const App = () => {
       }
     } catch (err) {
       console.log('Share failed', err);
-    }
-  };
-
-  // --- AI HANDLERS ---
-
-  const handleGenerateBenefits = async () => {
-    if (aiMode === 'benefits' && aiContent) return;
-    setAiMode('benefits');
-    setAiLoading(true);
-    
-    // Dynamically identify target language for prompt
-    const targetLanguage = TRANSLATIONS[lang]?.label || "English";
-    
-    const prompt = `You are a holistic nutritionist. Explain the key health benefits of '${activeProduct.name}' (Organic). Focus on traditional and scientific wellness properties. Respond in ${targetLanguage}. Use markdown. Keep it friendly and concise.`;
-    const text = await callGeminiText(prompt);
-    setAiContent(text);
-    setAiLoading(false);
-  };
-
-  const handleTTS = async () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
-      return;
-    }
-
-    if (audioUrl) {
-      audioRef.current = new Audio(audioUrl);
-      audioRef.current.play();
-      setIsPlaying(true);
-      audioRef.current.onended = () => setIsPlaying(false);
-      return;
-    }
-
-    setAiLoading(true); 
-    const textToSay = `Introducing ${activeProduct.name}. ${activeProduct.description}`;
-    const url = await callGeminiTTS(textToSay);
-    
-    setAiLoading(false);
-    
-    if (url) {
-      setAudioUrl(url);
-      audioRef.current = new Audio(url);
-      audioRef.current.play();
-      setIsPlaying(true);
-      audioRef.current.onended = () => setIsPlaying(false);
     }
   };
 
@@ -1086,36 +789,9 @@ const App = () => {
                 {localProduct.description}
               </p>
             </div>
-            <button 
-              onClick={handleTTS}
-              className={`w-full py-4 rounded-xl border border-white/10 flex items-center justify-center gap-3 transition-all ${isPlaying ? 'bg-red-600 text-white animate-pulse' : 'bg-white/5 text-red-400 hover:bg-white/10'}`}
-            >
-              {isPlaying ? <StopCircle className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-              <span className="font-bold text-sm">Listen to Description</span>
-            </button>
           </div>
 
-          {/* AI Action Buttons */}
-          <div className="mb-8">
-            <button 
-              onClick={handleGenerateBenefits}
-              className={`w-full p-5 rounded-2xl border border-white/10 flex items-center justify-center gap-3 transition-all active:scale-95 ${aiMode === 'benefits' ? 'bg-red-500/20 border-red-500 text-red-400' : 'bg-gradient-to-r from-red-900/40 to-black hover:bg-white/10 text-white'}`}
-            >
-              <HeartPulse className="w-6 h-6" />
-              <span className="text-sm font-bold tracking-wide">{t.benefits}</span>
-            </button>
-          </div>
-
-          {/* AI Output Area */}
-          <AIOutput 
-            type={aiMode} 
-            content={aiContent} 
-            loading={aiLoading} 
-            onClose={() => setAiMode(null)} 
-            lang={lang}
-          />
-
-          <div className="mt-12 p-6 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
+          <div className="mt-8 p-6 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
               <Info className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
               <div>
                   <h4 className="text-white font-bold text-sm mb-1">{t.originTitle}</h4>
@@ -1133,6 +809,76 @@ const App = () => {
             <Share2 className="w-5 h-5" />
             <span>{t.share}</span>
           </button>
+        </div>
+      </div>
+    );
+  };
+
+  const renderStoreLocator = () => {
+    const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+    return (
+      <div className="animate-slideUp min-h-screen">
+        <div className="flex items-center justify-between mb-8 sticky top-0 bg-[#2a0a0a]/80 backdrop-blur-xl py-4 z-20 border-b border-white/5">
+          <button onClick={() => handleViewChange('home')} className="p-2 -ml-2 rounded-full hover:bg-white/10 text-white transition-colors">
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <h2 className="text-xl font-bold text-white">{t.storeLocator}</h2>
+          <div className="w-10" /> 
+        </div>
+
+        <div className="space-y-6">
+          {/* Map Card */}
+          <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/5">
+             <iframe 
+               width="100%" 
+               height="400" 
+               frameBorder="0" 
+               scrolling="no" 
+               marginHeight="0" 
+               marginWidth="0" 
+               src="https://maps.google.com/maps?q=No.548%2FB%20Nawala%20Rd%2C%20Sri%20Jayawardenepura%20Kotte%2010100&t=&z=15&ie=UTF8&iwloc=&output=embed"
+               className="w-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+             ></iframe>
+             <div className="p-6">
+               <div className="flex items-start gap-4 mb-4">
+                 <div className="p-3 rounded-full bg-red-500/20 text-red-400">
+                   <MapPin className="w-6 h-6" />
+                 </div>
+                 <div>
+                   <h3 className="text-lg font-bold text-white mb-1">{t.visitUs}</h3>
+                   <p className="text-white/60 text-sm leading-relaxed">{t.storeAddress}</p>
+                 </div>
+               </div>
+               
+               <a 
+                 href="https://www.google.com/maps/search/?api=1&query=No.548/B+Nawala+Rd,+Sri+Jayawardenepura+Kotte+10100" 
+                 target="_blank" 
+                 rel="noreferrer"
+                 className="w-full py-3 bg-red-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-red-500 transition-colors"
+               >
+                 <MapPin className="w-4 h-4" />
+                 {t.directions}
+               </a>
+             </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <Clock className="w-8 h-8 text-red-400" />
+              <div>
+                <h4 className="text-white font-bold">Opening Hours</h4>
+                <p className="text-white/40 text-sm">Daily: 8:00 AM - 8:00 PM</p>
+              </div>
+            </div>
+            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <Phone className="w-8 h-8 text-red-400" />
+              <div>
+                <h4 className="text-white font-bold">Contact Us</h4>
+                <p className="text-white/40 text-sm">+94 11 234 5678</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
