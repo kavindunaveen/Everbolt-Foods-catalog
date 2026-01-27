@@ -828,23 +828,16 @@ const App = () => {
   };
 
   const handleShare = async () => {
-    const shareData = {
-      title: 'Everbolt Foods',
-      text: activeProduct ? `Check out this ${activeProduct.name}` : 'Check out our organic catalog!',
-      url: window.location.href,
-    };
-
-    try {
-      if (navigator.share) {
-        await navigator.share(shareData);
-      } else {
-        await navigator.clipboard.writeText(window.location.href);
-        setShowToast(true);
-        setTimeout(() => setShowToast(false), 2000);
-      }
-    } catch (err) {
-      console.log('Share failed', err);
-    }
+    // WhatsApp Share Logic
+    const phoneNumber = "94765400084";
+    const text = activeProduct 
+      ? `Check out this product: ${activeProduct.name}` 
+      : 'Check out our organic catalog!';
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
   };
 
   const renderLanguageSelect = () => {
@@ -986,7 +979,7 @@ const App = () => {
             className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold shadow-[0_0_30px_-10px_rgba(255,255,255,0.3)] hover:scale-105 active:scale-95 transition-all w-full md:w-auto justify-center"
           >
             <Share2 className="w-5 h-5" />
-            <span>{t.share}</span>
+            <span>WhatsApp Inquiry</span>
           </button>
         </div>
       </div>
