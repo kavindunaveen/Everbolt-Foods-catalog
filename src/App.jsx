@@ -291,7 +291,7 @@ const CATALOG_DATA = [
     theme: { blob1: 'bg-green-600/20', blob2: 'bg-emerald-700/20' },
     catImage: '/categories/dryveg.png',
     products: [
-      { id: 'jackfruit', name: 'Dried Jackfruit', description: 'Experience the rich taste of Sri Lankan jackfruit with our Dried Jackfruit, gently dried to preserve its natural flavor and texture without added colors or preservatives.', image: '/products/jackfruit.png', tags: ['50g', '100g'] },
+      { id: 'jackfruit', name: 'Dried Jackfruit', description: 'Experience the rich taste of Sri Lankan jackfruit with our Dried Jackfruit, gently dried to preserve its natural flavor and texture without added colors or preservatives.', image: '/products/Dried_Jackfruit.png', tags: ['50g', '100g'] },
       { id: 'breadfruit', name: 'Dried Breadfruit', description: 'Experience the wholesome flavor of Sri Lankan heritage with our Dried Breadfruit; gently dried to preserve its natural taste and texture without added colors or preservatives.', image: '/products/breadfruit.png', tags: ['50g', '100g'] },
       { id: 'bittergourd', name: 'Dried Bitter Gourd', description: 'Experience the authentic taste of Sri Lankan tradition with our Dried Bitter Gourd, gently dried to retain its natural bitterness, color, and nutrients without added colors or preservatives.', image: '/products/bittergourd.png', tags: ['50g', '100g'] },
       { id: 'curry-leaves-dry', name: 'Dried Curry Leaves', description: 'Experience the aroma of Sri Lankan kitchens with our Dried Curry Leaves, gently dried to retain their natural color and flavor without added colors or preservatives.', image: '/products/curry-leaves-dry.png', tags: ['50g', '100g'] },
